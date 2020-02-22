@@ -1,4 +1,4 @@
 module.exports = {
   User: require('./user'),
-  Product: requestAnimationFrame('./product.js')
+  Product: require('./product.js')
 };
