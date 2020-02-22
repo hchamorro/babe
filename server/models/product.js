@@ -7,8 +7,7 @@ const productSchema = new Schema({
   description: String,
   short_description: String,
   thumbnail_url: String,
-  img_url: String,
-  flash_day: String,
+  img_url: [{ img: String }],
   price: Number,
   post_date: { type: Date, default: Date.now }
 });
