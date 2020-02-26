@@ -1,22 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Products from './pages/Products';
+import About from './pages/About';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
+import Wellness from './pages/Wellness';
+import News from './pages/News';
 
 function App() {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      <img className="" src={require('./logo.svg')} alt="Display" />
-      <div className="px-6 py-4">
-        <div className="">Blessing Krofegha</div>
-        <p className="text-gray-700 text-base">
-          When i’m not coding i switch to netflix with biscuits and cold tea as
-          my companion. <span></span>😜
-        </p>
-      </div>
-      <div className="">
-        <span className="">#Software Engineer</span>
-        <span className="">#Writter</span>
-        <span className="">#Public Speaker</span>
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path={['/']} component={Home} />
+        <Route exact path={['/products']} component={Products} />
+        <Route exact path={['/about']} component={About} />
+        <Route exact path={['/cart']} component={Cart} />
+        <Route exact path={['/wellness']} component={Wellness} />
+        <Route exact path={['/news']} component={News} />
+
+
+
+      </Switch>
+    </Router>
   );
 }
 
