@@ -2,6 +2,7 @@
   "name": "clients",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "axios": "^0.19.2",
     "react": "^16.12.0",
