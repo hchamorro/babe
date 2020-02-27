@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from '../utils/context/UserContextHc';
+import API from '../utils/API';
 
 const SignUpForm = () => {
   const [email, setEmail] = useState('');
@@ -15,6 +16,16 @@ const SignUpForm = () => {
 
   const createUser = e => {
     e.preventDefault();
+    if (password && email) {
+      API.userAPI
+        .createUser({
+          password: password,
+          email: email,
+          cart: []
+        })
+        .then(res => console.log('it should be saved'))
+        .catch(err => console.log(err));
+    }
     setUser({ isLoggedIn: true, email: email });
   };
   return (
