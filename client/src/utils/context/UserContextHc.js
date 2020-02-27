@@ -5,8 +5,7 @@ export const UserContext = createContext();
 export const UserProvider = props => {
   const [user, setUser] = useState({
     isLoggedIn: false,
-    email: 'testing@email.com',
-    cart: []
+    email: 'testing@email.com'
   });
 
   return (
