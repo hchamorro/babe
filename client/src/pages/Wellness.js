@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../utils/context/UserContextHc';
 
 function Wellness() {
-  const [results, setResults] = useState({});
+  const [user, setUser] = useContext(UserContext);
 
-  useEffect(() => {}, []);
-
-  return <div>Hello Wellness</div>;
+  return (
+    <div>
+      {user.email}
+      Hello Wellness
+    </div>
+  );
 }
 
 export default Wellness;

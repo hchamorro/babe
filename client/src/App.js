@@ -6,20 +6,20 @@ import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Wellness from './pages/Wellness';
 import News from './pages/News';
+import { UserProvider } from './utils/context/UserContextHc';
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path={['/']} component={Home} />
-        <Route exact path={['/products']} component={Products} />
-        <Route exact path={['/about']} component={About} />
-        <Route exact path={['/cart']} component={Cart} />
-        <Route exact path={['/wellness']} component={Wellness} />
-        <Route exact path={['/news']} component={News} />
-
-
-
+        <UserProvider>
+          <Route exact path={['/']} component={Home} />
+          <Route exact path={['/products']} component={Products} />
+          <Route exact path={['/about']} component={About} />
+          <Route exact path={['/cart']} component={Cart} />
+          <Route exact path={['/wellness']} component={Wellness} />
+          <Route exact path={['/news']} component={News} />
+        </UserProvider>
       </Switch>
     </Router>
   );
