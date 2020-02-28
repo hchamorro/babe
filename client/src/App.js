@@ -9,6 +9,7 @@ import Wellness from "./pages/Wellness";
 import News from "./pages/News";
 import { UserProvider } from "./utils/context/UserContextHc";
 import Babe from "./assets/babe.css";
+import logo from "./assets/BABE-logo192.png";
 
 function App() {
   return (
@@ -16,6 +17,11 @@ function App() {
       <Router>
         <Switch>
           <UserProvider>
+            {/* logo header */}
+            <div>
+              <img className="object-center" src={logo} alt="B.A.B.E. logo" />
+            </div>
+            {/* nav bar */}
             <Nav />
             <Route exact path={["/"]} component={Home} />
             <Route exact path={["/products"]} component={Products} />
