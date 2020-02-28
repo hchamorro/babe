@@ -47,6 +47,15 @@ const wellnessSeed = [
   }
 ];
 
+const newsSeed = [
+  {
+    title: "Lab-Grown Breast Milk: Why?",
+    publisher: "The Atlantic",
+    source: "https://medium.com/the-atlantic/lab-grown-breast-milk-why-5ff1dd6e41c5",
+    description: "The obsession with breastfeeding has inspired a start-up to make human milk outside the human body.",
+    thumbnail_url: "https://miro.medium.com/max/1920/0*bG2exTRrmq4udarA.jpg",
+  }
+];
 
 db.Product.remove({})
   .then(() => db.Product.collection.insertMany(productsSeed))
@@ -61,6 +70,17 @@ db.Product.remove({})
 
 db.Wellness.remove({})
   .then(() => db.Wellness.collection.insertMany(wellnessSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
+db.News.remove({})
+  .then(() => db.News.collection.insertMany(newsSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
