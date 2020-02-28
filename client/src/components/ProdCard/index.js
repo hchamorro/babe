@@ -1,15 +1,18 @@
 import React from "react";
 
-function ProdCard() {
+function ProdCard(props) {
   return (
-  <div class="max-w-sm rounded overflow-hidden shadow-lg">
-      <img class="w-full" src="https://images.unsplash.com/photo-1561828995-aa79a2db86dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2900&q=80" alt="Sunset in the mountains"></img>
-      <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-        <p class="text-gray-700 text-base">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
+  <div className="max-w-sm rounded overflow-hidden shadow-lg">
+      <img className="w-full" src={props.thumbnail} alt=""/>
+      <img className="w-full" src={props.image} alt="" />
+      <div className="px-6 py-4">
+    <div className="font-bold text-xl mb-2">{props.title} Title Placeholder</div>
+        <div>{props.seller} Seller Placeholder</div>
+        <p>{props.short} Short Description Placeholder</p>
+        <p className="text-gray-700 text-base">{props.description} Description Placeholder</p>
+        <div>{props.price} Price Placeholder</div>
     </div>
+    
   </div>
   );
 }
