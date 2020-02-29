@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Nav from './components/Nav';
+
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Nav from "./components/Nav";
 import Shop from './pages/Shop';
-import About from './pages/About';
-import Home from './pages/Home';
-import Cart from './pages/Cart';
-import Wellness from './pages/Wellness';
-import News from './pages/News';
-import { UserProvider } from './utils/context/UserContextHc';
-import Babe from './assets/babe.css';
-import logo from './assets/BABE-192-logo.png';
-import shoppingCart from './assets/shopping-cart-solid.svg';
-import hamburger from './assets/bars-solid.svg';
-import { CartProvider } from './utils/context/CartContextHc';
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+import Wellness from "./pages/Wellness";
+import News from "./pages/News";
+import { UserProvider } from "./utils/context/UserContextHc";
+import Babe from "./assets/babe.css";
+import logo from "./assets/BABE-192-logo.png";
+import shoppingCart from "./assets/shopping-cart-solid.svg";
+import shoppingBag from "./assets/shopping-bag.svg";
+import hamburger from "./assets/bars-solid.svg";
+import { CartProvider } from "./utils/context/CartContextHc";
+
 
 function App() {
   return (
@@ -21,7 +24,7 @@ function App() {
         <UserProvider>
           <CartProvider>
             {/* logo header */}
-            <header className="flex items-center justify-between px-6 py-6">
+            <header className="flex items-center justify-between px-8 py-6">
               {/* home button */}
               <div>
                 <button type="button" className="block">
@@ -35,18 +38,20 @@ function App() {
               {/* shopping cart */}
               <div>
                 <button type="button" className="block">
-                  <img className="cart h-6" src={shoppingCart} alt="cart" />
+                  <img className="cart h-8" src={shoppingBag} alt="cart" />
                 </button>
               </div>
             </header>
             {/* nav bar */}
             <Nav />
+
             <Route exact path={['/']} component={Home} />
             <Route exact path={['/shop']} component={Shop} />
             <Route exact path={['/about']} component={About} />
             <Route exact path={['/cart']} component={Cart} />
             <Route exact path={['/wellness']} component={Wellness} />
             <Route exact path={['/news']} component={News} />
+
           </CartProvider>
         </UserProvider>
       </Switch>
