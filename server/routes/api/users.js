@@ -2,7 +2,7 @@ const router = require('express').Router();
 const isAuthenticated = require('../../config/isAuthenticated');
 const auth = require('../../config/auth');
 const usersController = require('../../controllers/userControllers');
-
+const db = require("../../models")
 // LOGIN ROUTE
 router.route('/login').post((req, res) => {
   auth
@@ -14,6 +14,18 @@ router.route('/login').post((req, res) => {
 // SIGNUP ROUTE
 router.route('/signup').post((req, res) => {
   usersController.signUp(req, res);
+});
+
+//update route
+router.route('/update/:id').post((req, res) => {
+  console.log(req.params.id);
+  // db.User.findById(req.params.id).then(data => {
+  //   console.log("did stuff")
+  //   console.log(data);
+  // })
+  db.User.update({ _id: req.params.id }, req.body)
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
 });
 
 // Any route with isAuthenticated is protected and you need a valid token
