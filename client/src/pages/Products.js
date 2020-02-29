@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import ProdCard from '../components/ProdCard';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import API from '../utils/API';
 
 function Products() {
   const [results, setResults] = useState({});
   const [products, setProducts] = useState([]);
 
-
-  useEffect(() => {findAllProducts()}, []);
+  useEffect(() => {
+    findAllProducts();
+  }, []);
 
   function findAllProducts() {
     API.productsAPI
@@ -18,8 +19,8 @@ function Products() {
   }
 
   function AddCart() {
-    //when this button is clicked, take the id of the product you clicked and add it to the product page 
-      console.log('*******Link Clicked*********');
+    //when this button is clicked, take the id of the product you clicked and add it to the product page
+    console.log('*******Link Clicked*********');
   }
 
   return (
@@ -36,19 +37,17 @@ function Products() {
 
       {products.map(product => (
         <ProdCard
-          thumbnail={product.thumbnail} 
-          title={product.title} 
-          seller={product.seller} 
-          short={product.short_description} 
-          price={product.price} 
+          thumbnail={product.thumbnail}
+          title={product.title}
+          seller={product.seller}
+          short={product.short_description}
+          price={product.price}
           AddCart={AddCart}
           key={product.id}
-          >
-          <Link to="">See More</Link>
-
+        >
+          {/* <Link to="">See More</Link> */}
         </ProdCard>
-        ))
-      }
+      ))}
       {console.log('We should see all the proucts here', products)}
     </div>
   );
