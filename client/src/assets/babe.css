@@ -5,7 +5,8 @@ body {
 }
 
 font {
-  color: #283044;
+  color: #718eeb;
+  font-size: 50%;
 }
 
 @font-face {
@@ -18,4 +19,8 @@ font {
       format("truetype"),
     url("./font/champagne_limousines/Champagne\ &\ Limousines\ Italic.ttf")
       format("truetype");
+}
+
+cart {
+  color: #718eeb;
 }
