@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "../../assets/babe.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../../assets/babe.css';
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
@@ -12,7 +12,7 @@ function Navbar() {
       <Link className="focus:text-white" to="/About">
         About
       </Link>
-      <Link className="focus:text-white" to="/Products">
+      <Link className="focus:text-white" to="/shop">
         Shop
       </Link>
       <Link className="focus:text-white" to="/News">
