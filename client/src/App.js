@@ -1,7 +1,8 @@
+
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
-import Products from "./pages/Products";
+import Shop from './pages/Shop';
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
@@ -14,6 +15,7 @@ import shoppingCart from "./assets/shopping-cart-solid.svg";
 import shoppingBag from "./assets/shopping-bag.svg";
 import hamburger from "./assets/bars-solid.svg";
 import { CartProvider } from "./utils/context/CartContextHc";
+
 
 function App() {
   return (
@@ -42,12 +44,14 @@ function App() {
             </header>
             {/* nav bar */}
             <Nav />
-            <Route exact path={["/"]} component={Home} />
-            <Route exact path={["/products"]} component={Products} />
-            <Route exact path={["/about"]} component={About} />
-            <Route exact path={["/cart"]} component={Cart} />
-            <Route exact path={["/wellness"]} component={Wellness} />
-            <Route exact path={["/news"]} component={News} />
+
+            <Route exact path={['/']} component={Home} />
+            <Route exact path={['/shop']} component={Shop} />
+            <Route exact path={['/about']} component={About} />
+            <Route exact path={['/cart']} component={Cart} />
+            <Route exact path={['/wellness']} component={Wellness} />
+            <Route exact path={['/news']} component={News} />
+
           </CartProvider>
         </UserProvider>
       </Switch>
