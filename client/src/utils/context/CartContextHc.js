@@ -1,19 +1,13 @@
 import React, { createContext, useState } from 'react';
 
-export const UserContext = createContext();
+export const CartContext = createContext();
 
-export const UserProvider = props => {
-  const [user, createUser] = useState([
-    {
-      isLoggedIn: false,
-      email: '',
-      cart: []
-    }
-  ]);
+export const CartProvider = props => {
+  const [cart, setCart] = useState([]);
 
   return (
-    <UserContext.Provider value={'hello context'}>
+    <CartContext.Provider value={[cart, setCart]}>
       {props.children}
-    </UserContext.Provider>
+    </CartContext.Provider>
   );
 };
