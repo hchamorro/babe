@@ -1,12 +1,12 @@
 body {
   background-color: #f2eeec;
   font-family: "champagne__limousines";
-  font-weight: bold;
+  color: #293045;
+  font-size: 160%;
 }
 
-font {
-  color: #718eeb;
-  font-size: 50%;
+link:hover {
+  color: #e9afa3;
 }
 
 @font-face {

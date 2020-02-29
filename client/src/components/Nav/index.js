@@ -1,27 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Babe from "../../assets/babe.css";
+import "../../assets/babe.css";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
   return (
     <nav className="flex justify-between px-64 py-10">
-      <Link className="font" to="/">
+      <Link className="focus:text-white" to="/">
         B.A.B.E.
       </Link>
-      <Link className="font" to="/About">
+      <Link className="focus:text-white" to="/About">
         About
       </Link>
-      <Link className="font" to="/Products">
+      <Link className="focus:text-white" to="/Products">
         Shop
       </Link>
-      <Link className="font" to="/News">
+      <Link className="focus:text-white" to="/News">
         News
       </Link>
-      <Link className="font" to="/Wellness">
+      <Link className="focus:text-white" to="/Wellness">
         Wellness
       </Link>
-      <Link className="font" to="/Cart">
+      <Link className="focus:text-white" to="/Cart">
         Cart
       </Link>
     </nav>
