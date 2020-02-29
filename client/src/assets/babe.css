@@ -1,7 +1,22 @@
 body {
   background-color: #f2eeec;
+  font-family: "champagne__limousinesregular";
 }
 
 font {
   color: #283044;
+}
+
+@font-face {
+  font-family: "champagne__limousinesregular";
+  src: url("./font/champagne_limousines/Champagne\ &\ Limousines.ttf")
+      format("truetype"),
+    url("./font/champagne_limousines/Champagne\ &\ Limousines\ Bold.ttf")
+      format("truetype"),
+    url("./font/champagne_limousines/Champagne\ &\ Limousines\ Bold\ Italic.ttf")
+      format("truetype"),
+    url("./font/champagne_limousines/Champagne\ &\ Limousines\ Italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
