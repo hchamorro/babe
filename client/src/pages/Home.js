@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ProdCard from '../components/ProdCard';
+import ProdCard from '../components/ProductCard';
 
 function Home() {
   const [results, setResults] = useState({});
@@ -11,7 +11,6 @@ function Home() {
       <ProdCard />
       <ProdCard />
     </div>
-    
   );
 }
 

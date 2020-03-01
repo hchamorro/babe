@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import { CartContext } from '../utils/context/CartContextHc';
 
 function Cart() {
   const [results, setResults] = useState({});
