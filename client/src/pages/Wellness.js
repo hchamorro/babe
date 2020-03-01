@@ -8,7 +8,6 @@ function Wellness() {
   const [products, setProducts] = useState([]);
 
   function findAllProducts() {
-    console.log("i'm clicked!");
     API.productsAPI
       .getProductsAPI()
       .then(res => setProducts(res.data))
