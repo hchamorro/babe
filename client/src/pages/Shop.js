@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import API from '../utils/API';
 import { CartContext } from '../utils/context/CartContextHc';
 
-function Products() {
+function Shop() {
   const [results, setResults] = useState({});
   const [products, setProducts] = useState([]);
   const [Cart, setCart] = useContext(CartContext);
@@ -59,10 +59,15 @@ function Products() {
           id={product._id}
         >
           {/* <Link to="">See More</Link> */}
+            <Link to={"/products/" + product._id}>
+                <strong>
+                  See More
+                </strong>
+            </Link>
         </ProdCard>
       ))}
     </div>
   );
 }
 
-export default Products;
+export default Shop;
