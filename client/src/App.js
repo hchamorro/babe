@@ -6,6 +6,7 @@ import Shop from './pages/Shop';
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
+import Products from "./pages/Products";
 import Wellness from "./pages/Wellness";
 import News from "./pages/News";
 import { UserProvider } from "./utils/context/UserContextHc";
@@ -51,6 +52,7 @@ function App() {
             <Route exact path={['/cart']} component={Cart} />
             <Route exact path={['/wellness']} component={Wellness} />
             <Route exact path={['/news']} component={News} />
+            <Route exact path={['/products']} component={Products} />
 
           </CartProvider>
         </UserProvider>
