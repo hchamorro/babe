@@ -15,7 +15,8 @@ const productsSeed = [
       { img: "https://dto508s2j2p46.cloudfront.net/system/spree/products/7959/large/hue-necklace-white-topaz-cc.png?1559661449" },
       { img: "https://dto508s2j2p46.cloudfront.net/system/spree/products/7961/large/hue-necklace-white-topaz-side-cc.png?1559661491" },
       { img: "https://dto508s2j2p46.cloudfront.net/system/spree/products/7748/large/Hue_Necklace_White_Topaz-Single-Side.jpg?1558707729" }
-    ]
+    ],
+    tags: "Jewelry"
   },
   {
     title: "Common Link Bracelet",
@@ -28,7 +29,128 @@ const productsSeed = [
       { img: "https://d2adyl8yz1ff2n.cloudfront.net/spree/images/attachments/000/053/905/xlarge/open-uri20191206-17381-lpkynb?1575670720" },
       { img: "https://d2adyl8yz1ff2n.cloudfront.net/spree/images/attachments/000/053/907/xlarge/open-uri20191206-17381-ttbcfc?1575670727" },
       { img: "https://d2adyl8yz1ff2n.cloudfront.net/spree/images/attachments/000/053/906/xlarge/open-uri20191206-17381-odbcau?1575670724" },
-    ]
+    ],
+    tags: "Jewelry"
+  },
+  {
+    title: "24/7 Pima Cotton T-Shirt Bra",
+    seller: "ThirdLove",
+    short_description: "Day-long wear, comfortable t-shirt style bra",
+    description: "It’s here: Our most beloved bra, now in cotton. Soft, strong, and so breathable, our 24/7™ Pima Cotton T-Shirt Bra is made with Pima cotton for a luxurious feel. Our fresh, modern design pairs perfectly with classic elements like our memory foam cups and comfortable double-layer band. It’s an everyday bra’s highest calling.",
+    thumbnail: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_CottonHipster_StormyLilac_B_PDP_01_2020_1197_150x.jpg?v=1581378624",
+    price: 68,
+    img_URL: [
+      { img: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_PRO_01_20203056_150x.jpg?v=1581378615" },
+      { img: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_CottonHipster_StormyLilac_B_PDP_01_2020_1267_150x.jpg?v=1581378637" },
+      { img: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_CottonHipster_StormyLilac_B_PDP_01_2020_1295_150x.jpg?v=1581378647" },
+    ],
+    tags: "ThirdLove",
+    tags: "Clothing",
+    tags: "Bras",
+  },
+  {
+    title: "Eyelash Lace Plunge Bra",
+    seller: "ThirdLove",
+    short_description: "Plunge style lace bra",
+    description: "Lace reinvented, we’ve transformed Parisian-inspired lace into a bra designed to appeal to you before anyone else. Created with dynamic layers of lace, sheer mesh and plunge-style memory foam cups, the Eyelash Lace Plunge forms to your breasts to give you a natural lift that can be enhanced with removable inserts. With a padded hook and eye, gold hardware and smooth band, this lace bra is your daily style starter.",
+    thumbnail: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2740_150x.jpg?v=1572386416",
+    price: 76,
+    img_URL: [
+      { img: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_PRO_08_2019-copy_150x.jpg?v=1572386416" },
+      { img: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2788_150x.jpg?v=1572386416" },
+      { img: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2816-copy_150x.jpg?v=1572386416" },
+    ],
+    tags: "ThirdLove",
+    tags: "Clothing",
+    tags: "Bras",
+  },
+  {
+    title: "Sensitive Wash",
+    seller: "the Honey Pot Company",
+    short_description: "Sensitive Feminine Wash",
+    description: "Use our sensitive feminine wash to boost moisture levels, calm irritation, and balance your pH while gently cleansing your most delicate parts. No itching, no burning, no worries, girl. The formula for this intimate cleanser for sensitive skin is 100% natural and made with herbal ingredients.",
+    thumbnail: "https://cdn.shopify.com/s/files/1/0510/5657/products/12083_021_Pink_Amazon_NEW_1296x.jpg?v=1575003796",
+    price: 9.99,
+    img_URL: [
+      { img: "https://cdn.shopify.com/s/files/1/0510/5657/products/products_0015_washes-sensitive-travel_2ca0fc46-7d81-4fc4-bea8-a88f07ea8648_1296x.jpg?v=1570724100" },
+    ],
+    tags: "Health and Wellness",
+    tags: "Feminine Products",
+    tags: "the Honey Pot Company",
+    tags: "Feminine Wash",
+    tags: "Sensitive",
+  },
+  {
+    title: "Soothing Body Balm",
+    seller: "the Honey Pot Company",
+    short_description: "Calm cramps and discomfort with our Soothing Body Balm.",
+    description: "Feel aches and pains melt away as this magic formula minimizes menstrual cramps, lower back pain, foot pain, and more. This body salve is infused with natural magnesium for menstrual cramps and 500 mg of broad-spectrum hemp distillate. This hemp and magnesium body balm does not contain THC. To use the calming, pain relief salve, apply a dime-sized amount on the lower abdomen (beneath the belly button, above the pelvis), lower back, hands, or feet.",
+    thumbnail: "https://cdn.shopify.com/s/files/1/0510/5657/products/12211_0069_Amazon_NEW_1512x.jpg?v=1575003798",
+    price: 35.99,
+    img_URL: [
+      { img: "https://cdn.shopify.com/s/files/1/0510/5657/products/12211_0069_Amazon_NEW_1512x.jpg?v=1575003798" },
+    ],
+    tags: "Health and Wellness",
+    tags: "Soothing",
+    tags: "the Honey Pot Company",
+    tags: "Menstrual Prodcuts",
+    tags: "Menstral Care",
+  },
+  {
+    title: "",
+    seller: "",
+    short_description: "",
+    description: "",
+    thumbnail: "",
+    price: ,
+    img_URL: [
+      { img: "" },
+      { img: "" },
+      { img: "" },
+    ],
+    tags: "",
+  },
+  {
+    title: "",
+    seller: "",
+    short_description: "",
+    description: "",
+    thumbnail: "",
+    price: ,
+    img_URL: [
+      { img: "" },
+      { img: "" },
+      { img: "" },
+    ],
+    tags: "",
+  },
+  {
+    title: "",
+    seller: "",
+    short_description: "",
+    description: "",
+    thumbnail: "",
+    price: ,
+    img_URL: [
+      { img: "" },
+      { img: "" },
+      { img: "" },
+    ],
+    tags: "",
+  },
+  {
+    title: "",
+    seller: "",
+    short_description: "",
+    description: "",
+    thumbnail: "",
+    price: ,
+    img_URL: [
+      { img: "" },
+      { img: "" },
+      { img: "" },
+    ],
+    tags: "",
   },
 ];
 
@@ -38,12 +160,14 @@ const wellnessSeed = [
     source: "https://mylola.com",
     description: "reproductive care by women, for women",
     thumbnail_url: "https://cdn.shopify.com/s/files/1/2568/9396/t/3/assets/tampons-hand-desktop-1562940697247.jpg",
+    tags: "Health and Wellness",
   },
   {
     title: "Dr. Jen Gunter",
     source: "https://drjengunter.com/",
     description: "Wielding the Lasso of Truth | I am an OB/GYN and a pain medicine physician. I write a lot about sex, science, and social media, but sometimes I write about other things because, well, why not?",
     thumbnail_url: "https://drjengunter.files.wordpress.com/2019/07/jen-gunter-headshot-tinified.jpg",
+    tags: "Health and Wellness",
   }
 ];
 

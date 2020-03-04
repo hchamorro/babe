@@ -9,7 +9,8 @@ const productSchema = new Schema({
   thumbnail_url: String,
   img_url: [{ img: String }],
   price: Number,
-  post_date: { type: Date, default: Date.now }
+  post_date: { type: Date, default: Date.now },
+  tags: String,
 });
 
 const Product = mongoose.model('Product', productSchema);

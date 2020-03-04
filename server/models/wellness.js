@@ -6,7 +6,8 @@ const wellnessSchema = new Schema({
     source: String,
     description: String,
     thumbnail_url: String,
-    post_date: { type: Date, default: Date.now }
+    post_date: { type: Date, default: Date.now },
+    tags: String
 });
 
 const Wellness = mongoose.model('Wellnes', wellnessSchema);
