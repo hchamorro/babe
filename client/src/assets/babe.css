@@ -1,11 +1,11 @@
-body {
+.body {
   background-color: #f2eeec;
   font-family: "champagne__limousines";
   color: #293045;
   font-size: 160%;
 }
 
-link:hover {
+.joanna:hover {
   color: #e9afa3;
 }
 
@@ -21,6 +21,33 @@ link:hover {
       format("truetype");
 }
 
-cart {
+.borders {
+  position: relative;
+  border-bottom: 1px solid black;
+}
+
+.borders:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 1px;
+  left: 0px;
+  right: 0px;
+  bottom: 1px;
+  border-bottom: 1px solid black;
+}
+
+.borders:after {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 3px;
+  border-bottom: 1px solid black;
+}
+
+.cart {
   color: #718eeb;
 }
