@@ -1,8 +1,7 @@
-
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
-import Shop from './pages/Shop';
+import Shop from "./pages/Shop";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
@@ -10,13 +9,12 @@ import Products from "./pages/Products";
 import Wellness from "./pages/Wellness";
 import News from "./pages/News";
 import { UserProvider } from "./utils/context/UserContextHc";
-import Babe from "./assets/babe.css";
 import logo from "./assets/BABE-192-logo.png";
+import "./assets/babe.css";
 import shoppingCart from "./assets/shopping-cart-solid.svg";
 import shoppingBag from "./assets/shopping-bag.svg";
 import hamburger from "./assets/bars-solid.svg";
 import { CartProvider } from "./utils/context/CartContextHc";
-
 
 function App() {
   return (
@@ -45,7 +43,7 @@ function App() {
             </header>
             {/* nav bar */}
             <Nav />
-
+    
             <Route exact path={['/']} component={Home} />
             <Route exact path={['/shop']} component={Shop} />
             <Route exact path={['/about']} component={About} />
@@ -53,6 +51,7 @@ function App() {
             <Route exact path={['/wellness']} component={Wellness} />
             <Route exact path={['/news']} component={News} />
             <Route exact path={['/shop/:id']} component={Products} />
+
 
           </CartProvider>
         </UserProvider>

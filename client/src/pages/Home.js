@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import ProdCard from '../components/ProductCard';
+import React, { useEffect, useState } from "react";
+import ProdCard from "../components/ProductCard";
+import "../assets/babe.css";
 
 function Home() {
   const [results, setResults] = useState({});
@@ -7,7 +8,9 @@ function Home() {
   useEffect(() => {}, []);
 
   return (
-    <div>
+    <div className="flex items-center justify-between px-12 py-8">
+      <ProdCard />
+      <ProdCard />
       <ProdCard />
       <ProdCard />
     </div>
