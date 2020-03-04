@@ -1,8 +1,12 @@
 import axios from 'axios';
 
 const productAPI = {
-  getProductsAPI: function(data) {
+  getAllProducts: function(data) {
     return axios.get('/api/products/', data);
+  },
+
+  findProduct: function(id) {
+    return axios.get('/api/products/' + id);
   }
 };
 

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from '../utils/context/UserContextHc';
 import SignUpForm from '../components/SignUpFormHc';
+import LoginForm from '../components/LoginFormHc';
 import API from '../utils/API';
 
 function Wellness() {
@@ -9,16 +10,16 @@ function Wellness() {
 
   function findAllProducts() {
     API.productsAPI
-      .getProductsAPI()
+      .getAllProducts()
       .then(res => setProducts(res.data))
       .catch(err => console.log(err));
   }
 
   return (
     <div>
-      {console.log('We should see all the proucts here', products)}
       {user.email}
       <SignUpForm />
+      <LoginForm />
       Hello Wellness
       <button onClick={findAllProducts}>Push</button>
     </div>
