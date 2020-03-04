@@ -43,13 +43,15 @@ function App() {
             {/* nav bar */}
             <Nav />
 
-            <Route exact path={["/"]} component={Home} />
-            <Route exact path={["/shop"]} component={Shop} />
-            <Route exact path={["/about"]} component={About} />
-            <Route exact path={["/cart"]} component={Cart} />
-            <Route exact path={["/wellness"]} component={Wellness} />
-            <Route exact path={["/news"]} component={News} />
-            <Route exact path={["/products"]} component={Products} />
+            <Route exact path={['/']} component={Home} />
+            <Route exact path={['/shop']} component={Shop} />
+            <Route exact path={['/about']} component={About} />
+            <Route exact path={['/cart']} component={Cart} />
+            <Route exact path={['/wellness']} component={Wellness} />
+            <Route exact path={['/news']} component={News} />
+            <Route exact path={['/shop/:id']} component={Products} />
+
+
           </CartProvider>
         </UserProvider>
       </Switch>
