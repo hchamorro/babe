@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import API from "../utils/API";
 import { CartContext } from "../utils/context/CartContextHc";
 import { UserContext } from "../utils/context/UserContextHc";
+import "../assets/babe.css";
 
 function Shop() {
   const [results, setResults] = useState({});
@@ -58,21 +59,22 @@ function Shop() {
           thumbnail={product.thumbnail}
           title={product.title}
           seller={product.seller}
-          short={product.short_description}
+          // short={product.short_description}
           price={product.price}
           AddCart={AddCart}
           key={product._id}
           id={product._id}
         >
           {/* <Link to="">See More</Link> */}
-        
-            <Link to={"/shop/" + product._id}>
-                <strong>
-                  See More
-                  {console.log('***************product detail page opened by id*****************')}
-                </strong>
-            </Link>
 
+          <Link className="a" to={"/shop/" + product._id}>
+            <strong>
+              See More
+              {console.log(
+                "***************product detail page opened by id*****************"
+              )}
+            </strong>
+          </Link>
         </ProdCard>
       ))}
     </div>
