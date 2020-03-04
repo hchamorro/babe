@@ -95,63 +95,7 @@ const productsSeed = [
     tags: "the Honey Pot Company",
     tags: "Menstrual Prodcuts",
     tags: "Menstral Care",
-  },
-  {
-    title: "",
-    seller: "",
-    short_description: "",
-    description: "",
-    thumbnail: "",
-    price: ,
-    img_URL: [
-      { img: "" },
-      { img: "" },
-      { img: "" },
-    ],
-    tags: "",
-  },
-  {
-    title: "",
-    seller: "",
-    short_description: "",
-    description: "",
-    thumbnail: "",
-    price: ,
-    img_URL: [
-      { img: "" },
-      { img: "" },
-      { img: "" },
-    ],
-    tags: "",
-  },
-  {
-    title: "",
-    seller: "",
-    short_description: "",
-    description: "",
-    thumbnail: "",
-    price: ,
-    img_URL: [
-      { img: "" },
-      { img: "" },
-      { img: "" },
-    ],
-    tags: "",
-  },
-  {
-    title: "",
-    seller: "",
-    short_description: "",
-    description: "",
-    thumbnail: "",
-    price: ,
-    img_URL: [
-      { img: "" },
-      { img: "" },
-      { img: "" },
-    ],
-    tags: "",
-  },
+  }
 ];
 
 const wellnessSeed = [
