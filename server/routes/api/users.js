@@ -17,13 +17,13 @@ router.route('/signup').post((req, res) => {
 });
 
 //update route
-router.route('/update/:id').post((req, res) => {
+router.route('/update/:id').put((req, res) => {
   console.log(req.params.id);
   // db.User.findById(req.params.id).then(data => {
   //   console.log("did stuff")
   //   console.log(data);
   // })
-  db.User.update({ _id: req.params.id }, req.body)
+  db.User.updateOne({ _id: req.params.id }, { $push: { "cart": { product: "Hello world" } } })
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
 });
