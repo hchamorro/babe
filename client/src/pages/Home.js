@@ -8,12 +8,20 @@ function Home() {
   useEffect(() => {}, []);
 
   return (
-    <div className="flex items-center justify-between px-12 py-8">
-      <ProdCard />
-      <ProdCard />
-      <ProdCard />
-      <ProdCard />
-    </div>
+    // what's new section
+    <section>
+      <div className="flex justify-around subhead items-center py-8">
+        what's new
+      </div>
+      <div className="flex items-center justify-between px-12 py-8">
+        <ProdCard />
+        <ProdCard />
+        <ProdCard />
+        <ProdCard />
+      </div>
+    </section>
+
+    // what's trending
   );
 }
 

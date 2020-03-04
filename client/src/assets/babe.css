@@ -5,20 +5,36 @@
   font-size: 160%;
 }
 
-.joanna:hover {
+.a:hover {
   color: #e9afa3;
 }
 
+/* regular */
 @font-face {
   font-family: "champagne__limousines";
   src: url("./font/champagne_limousines/Champagne\ &\ Limousines.ttf")
-      format("truetype"),
-    url("./font/champagne_limousines/Champagne\ &\ Limousines\ Bold.ttf")
-      format("truetype"),
-    url("./font/champagne_limousines/Champagne\ &\ Limousines\ Bold\ Italic.ttf")
-      format("truetype"),
-    url("./font/champagne_limousines/Champagne\ &\ Limousines\ Italic.ttf")
-      format("truetype");
+    format("truetype");
+}
+
+/* regular italic */
+@font-face {
+  font-family: "champagne__limousinesitalic";
+  src: url("./font/champagne_limousines/Champagne\ &\ Limousines\ Italic.ttf")
+    format("truetype");
+}
+
+/* bold */
+@font-face {
+  font-family: "champagne__limousinesbold";
+  src: url("./font/champagne_limousines/Champagne\ &\ Limousines\ Bold.ttf")
+    format("truetype");
+}
+
+/* bold italic */
+@font-face {
+  font-family: "champagne__limousinesBdIt";
+  src: url("./font/champagne_limousines/Champagne\ &\ Limousines\ Bold\ Italic.ttf")
+    format("truetype");
 }
 
 .borders {
@@ -50,4 +66,14 @@
 
 .cart {
   color: #718eeb;
+}
+
+.cart:hover {
+  color: #e9afa3;
+}
+
+.subhead {
+  color: #718eeb;
+  font-family: "champagne__limousinesBdIt";
+  font-size: 200%;
 }
