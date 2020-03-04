@@ -2,7 +2,7 @@ const router = require('express').Router();
 const isAuthenticated = require('../../config/isAuthenticated');
 const auth = require('../../config/auth');
 const usersController = require('../../controllers/userControllers');
-const db = require("../../models")
+const db = require('../../models');
 // LOGIN ROUTE
 router.route('/login').post((req, res) => {
   auth
@@ -23,7 +23,10 @@ router.route('/update/:id').put((req, res) => {
   //   console.log("did stuff")
   //   console.log(data);
   // })
-  db.User.updateOne({ _id: req.params.id }, { $push: { "cart": { product: "Hello world" } } })
+  db.User.updateOne(
+    { _id: req.params.id },
+    { $push: { cart: { product: '5e5182070fa3d46f40e0486e' } } }
+  )
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
 });

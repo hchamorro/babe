@@ -34,7 +34,8 @@ const LogInForm = () => {
             id: res.data.user._id,
             cart: res.data.user.cart
           });
-          setCart([...cart, res.data.user.cart]);
+
+          setCart([...cart, ...res.data.user.cart]);
         })
         .catch(err => console.log(err));
     }
