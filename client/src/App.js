@@ -52,7 +52,7 @@ function App() {
             <Route exact path={['/cart']} component={Cart} />
             <Route exact path={['/wellness']} component={Wellness} />
             <Route exact path={['/news']} component={News} />
-            <Route exact path={['/products']} component={Products} />
+            <Route exact path={['/shop/:id']} component={Products} />
 
           </CartProvider>
         </UserProvider>
