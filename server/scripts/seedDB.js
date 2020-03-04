@@ -16,7 +16,9 @@ const productsSeed = [
       { img: "https://dto508s2j2p46.cloudfront.net/system/spree/products/7961/large/hue-necklace-white-topaz-side-cc.png?1559661491" },
       { img: "https://dto508s2j2p46.cloudfront.net/system/spree/products/7748/large/Hue_Necklace_White_Topaz-Single-Side.jpg?1558707729" }
     ],
-    tags: "Jewelry"
+    tags: "Jewelry",
+    tags: "Mejuri",
+    tags: "Necklace"
   },
   {
     title: "Common Link Bracelet",
@@ -30,7 +32,9 @@ const productsSeed = [
       { img: "https://d2adyl8yz1ff2n.cloudfront.net/spree/images/attachments/000/053/907/xlarge/open-uri20191206-17381-ttbcfc?1575670727" },
       { img: "https://d2adyl8yz1ff2n.cloudfront.net/spree/images/attachments/000/053/906/xlarge/open-uri20191206-17381-odbcau?1575670724" },
     ],
-    tags: "Jewelry"
+    tags: "Jewelry",
+    tags: "Mejuri",
+    tags: "Bracelet",
   },
   {
     title: "24/7 Pima Cotton T-Shirt Bra",
@@ -78,6 +82,7 @@ const productsSeed = [
     tags: "Feminine Products",
     tags: "the Honey Pot Company",
     tags: "Feminine Wash",
+    tags: "Feminine Care",
     tags: "Sensitive",
   },
   {
@@ -95,7 +100,55 @@ const productsSeed = [
     tags: "the Honey Pot Company",
     tags: "Menstrual Prodcuts",
     tags: "Menstral Care",
-  }
+    tags: "Feminine Care",
+  },
+  {
+    title: "Cardboard applicator tampons",
+    seller: "MyLola",
+    short_description: "Cardboard applicator tampons, 18 count",
+    description: "No plastic, no problem. These tampons offer serious leak protection, with a smooth, curved tip applicator for added comfort.",
+    thumbnail: "https://cdn.shopify.com/s/files/1/2568/9396/products/LOLADP_SHOT_08-050_03_16a8cb13-ab4e-4615-a128-df07c2ed3c0e_960x822.jpg?v=1570654805",
+    price: 8,
+    img_URL: [
+      { img: "https://cdn.shopify.com/s/files/1/2568/9396/products/LOLADP_SHOT_21-010_03_960x822.jpg?v=1570654811" },
+    ],
+    tags: "Health and Wellness",
+    tags: "MyLola",
+    tags: "Tampons",
+    tags: "Menstral Products",
+    tags: "Feminine Care",
+  },
+  {
+    title: "Ultra thin liners",
+    seller: "MyLola",
+    short_description: "Ultra thin liners, 28 count",
+    description: "Slim, but never skimpy on leak protection. Perfect for your period’s lighter days. Or when you want an extra line of defense.",
+    thumbnail: "https://cdn.shopify.com/s/files/1/2568/9396/products/LOLADP_SHOT_34-010_04_960x822.jpg?v=1570655011",
+    price: 9,
+    img_URL: [
+      { img: "https://cdn.shopify.com/s/files/1/2568/9396/products/LOLADP_SHOT_16-015_03_960x822.jpg?v=1570655018" },
+    ],
+    tags: "Health and Wellness",
+    tags: "MyLola",
+    tags: "Pads",
+    tags: "Menstral Products",
+    tags: "Feminine Care",
+  },
+  {
+    title: "Medium Shampoo",
+    seller: "Ouai",
+    short_description: "Shampoo for Medium Hair",
+    description: "Need a glow up? This hydrating shampoo nourishes with babassu and coconut oils, strengthens with keratin and adds shine with kumquat extract. Hair is left shiny, silky and flirty - so you can update that profile pic.",
+    thumbnail: "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Shampoo-Web_100x75.jpg?v=1581492943",
+    price: 28,
+    img_URL: [
+      { img: "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Shampoo-Web_100x75.jpg?v=1581492943" },
+    ],
+    tags: "Hair Care",
+    tags: "Ouai",
+    tags: "Beatuy",
+    tags: "Shampoo"
+  },
 ];
 
 const wellnessSeed = [
