@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProdCard from "../components/ProductCard";
+import "../assets/babe.css";
 
 function Home() {
   const [results, setResults] = useState({});
