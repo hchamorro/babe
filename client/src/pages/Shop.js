@@ -3,11 +3,13 @@ import ProdCard from '../components/ProductCard';
 import { Link } from 'react-router-dom';
 import API from '../utils/API';
 import { CartContext } from '../utils/context/CartContextHc';
+import { UserContext } from '../utils/context/UserContextHc';
 
 function Shop() {
   const [results, setResults] = useState({});
   const [products, setProducts] = useState([]);
-  const [Cart, setCart] = useContext(CartContext);
+  const [cart, setCart] = useContext(CartContext);
+  const [user, setUser] = useContext(UserContext);
 
   useEffect(() => {
     findAllProducts();
@@ -15,20 +17,28 @@ function Shop() {
 
   function findAllProducts() {
     API.productsAPI
-      .getProductsAPI()
+      .getAllProducts()
       .then(res => setProducts(res.data))
       .catch(err => console.log(err));
   }
 
   function AddCart(id) {
-    //when this button is clicked, take the id of the product you clicked and add it to the product page
-    console.log('*******hopefully id is here*********', id);
-    setCart([...Cart, id]);
+    setCart([...cart, id]);
+    if (user.isLoggedIn) {
+      console.log('trying to update db');
+      const id = user.id;
+      API.userAPI
+        .updateUserCart(id, cart)
+        .then(res => {
+          console.log('^^^^^^^^', res);
+        })
+        .catch(err => console.log(err));
+    }
   }
 
   return (
     <div>
-      <ProdCard
+      {/* <ProdCard
         title="Title Placeholder"
         seller="Seller Placeholder"
         short="Short
@@ -41,12 +51,8 @@ function Shop() {
         >
           Add to Cart
         </button>
-      </ProdCard>
-      {console.log(
-        '~~~~~~~~~~~~~~~~~~~~~~~~CART~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`',
-        Cart
-      )}
-      {console.log('^^^^Products^^^^^', products)}
+      </ProdCard> */}
+      {console.log(' this is what the cart looks like on SHOP PAGE', cart)}
       {products.map(product => (
         <ProdCard
           thumbnail={product.thumbnail}

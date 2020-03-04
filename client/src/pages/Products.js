@@ -12,7 +12,7 @@ function Products(props) {
     // e.g. http://localhost:3000/products/5e5185556eae2c3520e303e1
     const {id} = useParams(props)
     useEffect(() => {
-        API.getProductsAPI(id)
+        API.productsAPI.findProduct(id)
         .then(res => setProducts(res.data))
         .catch(err => console.log(err));
 }, [])
