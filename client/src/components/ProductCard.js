@@ -12,10 +12,10 @@ function ProdCard(props) {
         <p>{props.short}</p>
         <p className="text-gray-700 text-base">{props.description}</p>
         <div className="price">${props.price}</div>
-        <div className="flex justify-between block px-8">
+        <div className="flex justify-between">
           <button
             onClick={() => props.AddCart(props.id)}
-            className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+            className="add-to-cart bg-white hover:bg-gray-100 text-gray-800 font-semibold py-0 px-2 border border-gray-400 rounded shadow"
           >
             Add to Cart
           </button>

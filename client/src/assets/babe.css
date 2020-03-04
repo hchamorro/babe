@@ -9,6 +9,11 @@
   color: #e9afa3;
 }
 
+.add-to-cart {
+  font-family: "champagne__limousines";
+  font-size: 60%;
+}
+
 /* regular */
 @font-face {
   font-family: "champagne__limousines";
@@ -74,10 +79,17 @@
 
 .price {
   font-family: "champagne__limousinesBdIt";
+  font-size: 100%;
 }
 
 .subhead {
   color: #718eeb;
+  font-family: "champagne__limousinesBdIt";
+  font-size: 200%;
+}
+
+.subhead-2 {
+  color: #e9afa3;
   font-family: "champagne__limousinesBdIt";
   font-size: 200%;
 }

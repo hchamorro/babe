@@ -8,20 +8,25 @@ function Home() {
   useEffect(() => {}, []);
 
   return (
-    // what's new section
     <section>
+      {/* what's new */}
       <div className="flex justify-around subhead items-center py-8">
         what's new
       </div>
-      <div className="flex items-center justify-between px-12 py-8">
+      <div className="flex items-center justify-around px-12 py-8">
         <ProdCard />
         <ProdCard />
         <ProdCard />
         <ProdCard />
       </div>
+      {/* trending */}
+      <div className="flex justify-around subhead-2 items-center py-8">
+        trending
+      </div>
+      <div className="flex items-center justify-between px-12 py-8">
+        trending story here
+      </div>
     </section>
-
-    // what's trending
   );
 }
 

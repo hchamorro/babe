@@ -66,14 +66,15 @@ function Shop() {
           id={product._id}
         >
           {/* <Link to="">See More</Link> */}
-        
-            <Link to={"/shop/" + product._id}>
-                <strong>
-                  See More
-                  {console.log('***************product detail page opened by id*****************')}
-                </strong>
-            </Link>
 
+          <Link className="a" to={"/shop/" + product._id}>
+            <strong>
+              See More
+              {console.log(
+                "***************product detail page opened by id*****************"
+              )}
+            </strong>
+          </Link>
         </ProdCard>
       ))}
     </div>
