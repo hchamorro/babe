@@ -11,7 +11,6 @@ import News from "./pages/News";
 import { UserProvider } from "./utils/context/UserContextHc";
 import logo from "./assets/BABE-192-logo.png";
 import "./assets/babe.css";
-import shoppingCart from "./assets/shopping-cart-solid.svg";
 import shoppingBag from "./assets/shopping-bag.svg";
 import hamburger from "./assets/bars-solid.svg";
 import { CartProvider } from "./utils/context/CartContextHc";
@@ -26,7 +25,7 @@ function App() {
             <header className="flex items-center justify-between px-8 py-6">
               {/* home button */}
               <div>
-                <button type="button" className="block">
+                <button type="button" className="cart block">
                   <img className="h-6" src={hamburger} alt="Home Button" />
                 </button>
               </div>
@@ -36,7 +35,7 @@ function App() {
               </div>
               {/* shopping cart */}
               <div>
-                <button type="button" className="block">
+                <button type="button" className="cart block">
                   <img className="cart h-8" src={shoppingBag} alt="cart" />
                 </button>
               </div>
