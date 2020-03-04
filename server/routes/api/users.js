@@ -25,7 +25,8 @@ router.route('/update/:id').put((req, res) => {
   // })
   db.User.updateOne(
     { _id: req.params.id },
-    { $push: { cart: { product: '5e5182070fa3d46f40e0486e' } } }
+    //change push to only one string then maybe a req.body
+    { $push: { cart: '5e5182070fa3d46f40e0486e' } }
   )
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
