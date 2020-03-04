@@ -7,7 +7,8 @@ const newsSchema = new Schema({
     source: String,
     description: String,
     thumbnail_url: String,
-    post_date: { type: Date, default: Date.now }
+    post_date: { type: Date, default: Date.now },
+    tags: String,
 });
 
 const News = mongoose.model('News', newsSchema);
