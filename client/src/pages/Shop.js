@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useContext } from 'react';
-import ProdCard from '../components/ProductCard';
-import { Link } from 'react-router-dom';
-import API from '../utils/API';
-import { CartContext } from '../utils/context/CartContextHc';
-import { UserContext } from '../utils/context/UserContextHc';
+import React, { useEffect, useState, useContext } from "react";
+import ProdCard from "../components/ProductCard";
+import { Link } from "react-router-dom";
+import API from "../utils/API";
+import { CartContext } from "../utils/context/CartContextHc";
+import { UserContext } from "../utils/context/UserContextHc";
 
 function Shop() {
   const [results, setResults] = useState({});
@@ -25,12 +25,12 @@ function Shop() {
   function AddCart(id) {
     setCart([...cart, id]);
     if (user.isLoggedIn) {
-      console.log('trying to update db');
+      console.log("trying to update db");
       const id = user.id;
       API.userAPI
         .updateUserCart(id, cart)
         .then(res => {
-          console.log('^^^^^^^^', res);
+          console.log("^^^^^^^^", res);
         })
         .catch(err => console.log(err));
     }
@@ -52,7 +52,7 @@ function Shop() {
           Add to Cart
         </button>
       </ProdCard> */}
-      {console.log(' this is what the cart looks like on SHOP PAGE', cart)}
+      {console.log(" this is what the cart looks like on SHOP PAGE", cart)}
       {products.map(product => (
         <ProdCard
           thumbnail={product.thumbnail}
@@ -65,11 +65,9 @@ function Shop() {
           id={product._id}
         >
           {/* <Link to="">See More</Link> */}
-            <Link to={"/products/" + product._id}>
-                <strong>
-                  See More
-                </strong>
-            </Link>
+          <Link className="a" to={"/products/" + product._id}>
+            <strong>See More</strong>
+          </Link>
         </ProdCard>
       ))}
     </div>

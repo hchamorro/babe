@@ -6,22 +6,22 @@ import "../../assets/babe.css";
 function Navbar() {
   return (
     <nav className="borders flex justify-between px-64 py-10">
-      <Link className="joanna" to="/">
+      <Link className="a" to="/">
         B.A.B.E.
       </Link>
-      <Link className="joanna" to="/About">
+      <Link className="a" to="/About">
         About
       </Link>
-      <Link className="joanna" to="/shop">
+      <Link className="a" to="/shop">
         Shop
       </Link>
-      <Link className="joanna" to="/News">
+      <Link className="a" to="/News">
         News
       </Link>
-      <Link className="joanna" to="/Wellness">
+      <Link className="a" to="/Wellness">
         Wellness
       </Link>
-      <Link className="joanna" to="/Cart">
+      <Link className="a" to="/Cart">
         Cart
       </Link>
     </nav>
