@@ -18,7 +18,14 @@ const UserSchema = new Schema({
     required: true
   },
   //change cart to an array
-  cart: [{ type: String, required: true }],
+  cart: [
+    {
+      _id: false,
+      id: { type: String, required: true },
+      qty: { type: Number },
+      price: { type: Number }
+    }
+  ],
   createdAt: {
     type: Date,
     default: Date.now

@@ -92,13 +92,13 @@ function Cart() {
       </div> */}
 
         <div className="max-w-sm w-full lg:max-w-full ">
-          <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4  leading-normal w-1/4">
-            <div class="mb-8">
-              <div class="flex  mb-4">
-                <div class="w-1/2  h-12 text-gray-900 font-bold text-xl mb-2">
+          <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4  leading-normal w-1/4">
+            <div className="mb-8">
+              <div className="flex  mb-4">
+                <div className="w-1/2  h-12 text-gray-900 font-bold text-xl mb-2">
                   Total
                 </div>
-                <div class="w-1/2  h-12 text-gray-700 text-base">
+                <div className="w-1/2  h-12 text-gray-700 text-base">
                   ${totalPrice}
                 </div>
               </div>
