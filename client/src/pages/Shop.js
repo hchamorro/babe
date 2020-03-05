@@ -30,9 +30,10 @@ function Shop() {
   //   }
   // }
 
-  function AddCart(id) {
+  function AddCart(id, qty, price) {
     let p1 = new Promise((resolve, reject) => {
-      setCart([...cart, id]);
+      handleQty(id, qty, price);
+      // setCart([...cart, id]);
       resolve(cart);
     });
     p1.then(updateUserDB(cart));
@@ -47,6 +48,21 @@ function Shop() {
         console.log('^^^^^^^^', res);
       })
       .catch(err => console.log(err));
+  }
+
+  function handleQty(id, qty, price) {
+    const existingProduct = cart.filter(p => p.id === id);
+    if (existingProduct.length > 0) {
+      console.log('you already have this in cart');
+      const withoutExistingProduct = cart.filter(p => p.id !== id);
+      const updatedQty = {
+        ...existingProduct[0],
+        qty: existingProduct[0].qty + qty
+      };
+      setCart([...withoutExistingProduct, updatedQty]);
+    } else {
+      setCart([...cart, { id, qty, price }]);
+    }
   }
   // function updateUserDbCart(id) {
   //   return new Promise(resolve => {
@@ -81,6 +97,7 @@ function Shop() {
           AddCart={AddCart}
           key={product._id}
           id={product._id}
+          qty={1}
         >
           {/* <Link to="">See More</Link> */}
 

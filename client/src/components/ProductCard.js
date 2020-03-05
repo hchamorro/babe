@@ -1,5 +1,5 @@
-import React from "react";
-import "../assets/babe.css";
+import React from 'react';
+import '../assets/babe.css';
 
 function ProdCard(props) {
   return (
@@ -14,7 +14,7 @@ function ProdCard(props) {
         <div className="price">${props.price}</div>
         <div className="flex justify-between">
           <button
-            onClick={() => props.AddCart(props.id)}
+            onClick={() => props.AddCart(props.id, props.qty, props.price)}
             className="add-to-cart bg-white hover:bg-gray-100 text-gray-800 font-semibold py-0 px-2 border border-gray-400 rounded shadow"
           >
             Add to Cart
