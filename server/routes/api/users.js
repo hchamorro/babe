@@ -18,15 +18,11 @@ router.route('/signup').post((req, res) => {
 
 //update route
 router.route('/update/:id').put((req, res) => {
-  console.log(req.params.id);
-  // db.User.findById(req.params.id).then(data => {
-  //   console.log("did stuff")
-  //   console.log(data);
-  // })
+  console.log(req.body);
   db.User.updateOne(
     { _id: req.params.id },
     //change push to only one string then maybe a req.body
-    { $push: { cart: '5e5182070fa3d46f40e0486e' } }
+    { $set: { cart: req.body } }
   )
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
