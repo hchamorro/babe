@@ -6,6 +6,7 @@ import API from '../utils/API';
 function Cart() {
   const [results, setResults] = useState([]);
   const [cart, setCart] = useContext(CartContext);
+  const [totalCost, setTotalCost] = useState();
 
   function getCartData() {
     return Promise.all(cart.map(fetchData));
@@ -17,8 +18,32 @@ function Cart() {
   }
 
   useEffect(() => {
-    getCartData().then(res => setResults(res));
+    getCartData().then(res => {
+      setResults(res);
+      let total = 0;
+      for (var i = 0; i < res.length; i++) {
+        total += res[i].price;
+      }
+      console.log('total', total);
+      setTotalCost(total);
+    });
   }, []);
+
+  // getCartProducts(cart).then((products) => {
+  //   let total = 0;
+  //   for (var i = 0; i < products.length; i++) {
+  //     total += products[i].price * products[i].qty;
+  //   }
+  //   this.setState({ products, total });
+  //   });
+
+  function removeItem(id) {
+    let resultsArray = results.filter(result => result._id !== id);
+    console.log('results array after filtering', resultsArray);
+    console.log('ID______________', id);
+    setResults(resultsArray);
+    setCart(resultsArray);
+  }
 
   if (results.length < 1) {
     return (
@@ -39,9 +64,10 @@ function Cart() {
             seller={result.seller}
             short={result.short_description}
             price={result.price}
-            key={results.length + 1}
-            id={results.id}
+            key={result.length * Math.random()}
+            id={result._id}
             img={result.img_URL[0].img}
+            remove={removeItem}
           />
         ))}
 
@@ -69,6 +95,21 @@ function Cart() {
           </div>
         </div>
       </div> */}
+
+        <div className="max-w-sm w-full lg:max-w-full ">
+          <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4  leading-normal w-1/4">
+            <div class="mb-8">
+              <div class="flex  mb-4">
+                <div class="w-1/2  h-12 text-gray-900 font-bold text-xl mb-2">
+                  Total
+                </div>
+                <div class="w-1/2  h-12 text-gray-700 text-base">
+                  ${totalCost}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
