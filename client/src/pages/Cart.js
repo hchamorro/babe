@@ -6,13 +6,12 @@ import API from '../utils/API';
 function Cart() {
   const [results, setResults] = useState([]);
   const [cart, setCart] = useContext(CartContext);
-  const [totalCost, setTotalCost] = useState();
 
   function getCartData() {
-    return Promise.all(cart.map(fetchData));
+    return Promise.all(cart.map(p => fetchData(p.id)));
   }
-  function fetchData(cart) {
-    return API.productsAPI.findProduct(cart).then(res => {
+  function fetchData(id) {
+    return API.productsAPI.findProduct(id).then(res => {
       return res.data;
     });
   }
@@ -20,14 +19,10 @@ function Cart() {
   useEffect(() => {
     getCartData().then(res => {
       setResults(res);
-      let total = 0;
-      for (var i = 0; i < res.length; i++) {
-        total += res[i].price;
-      }
-      console.log('total', total);
-      setTotalCost(total);
     });
   }, []);
+
+  const totalPrice = cart.reduce((acc, curr) => acc + curr.price * curr.qty, 0);
 
   // getCartProducts(cart).then((products) => {
   //   let total = 0;
@@ -40,7 +35,6 @@ function Cart() {
   function removeItem(id) {
     let resultsArray = results.filter(result => result._id !== id);
     console.log('results array after filtering', resultsArray);
-    console.log('ID______________', id);
     setResults(resultsArray);
     setCart(resultsArray);
   }
@@ -48,6 +42,7 @@ function Cart() {
   if (results.length < 1) {
     return (
       <div>
+        {console.log('-------cart--------', cart)}
         {console.log('~~~~~~~~~~~~~~~~~~~~~~~~~results', results)}
         No Items in cart
       </div>
@@ -104,7 +99,7 @@ function Cart() {
                   Total
                 </div>
                 <div class="w-1/2  h-12 text-gray-700 text-base">
-                  ${totalCost}
+                  ${totalPrice}
                 </div>
               </div>
             </div>
