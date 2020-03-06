@@ -36,19 +36,6 @@ function Cart() {
   function removeItem(id) {
     const resultsArray = results.filter(result => result._id !== id);
     const updatedCart = cart.filter(p => p.id !== id);
-
-    // resultsArray.forEach(p => {
-    //   if (p.id === cart.id) {
-    //     updatedCart = {
-    //       id: p.id,
-    //       qty: cart.qty,
-    //       price: p.price
-    //     };
-    //   }
-    //   return updatedCart;
-    // });
-    // console.log('results array after filtering', resultsArray);
-    // console.log('updated cart...............', updatedCart);
     setResults(resultsArray);
     setCart(updatedCart);
   }
@@ -62,6 +49,16 @@ function Cart() {
     });
     console.log('this is the quantitiy', _id, qty);
     return qty;
+  }
+
+  function addQty(id) {
+    cart.forEach(p => {
+      if (id === p.id) {
+        p.qty = p.qty + 1;
+      }
+    });
+    resQty(id);
+    setCart(cart);
   }
 
   if (results.length < 1) {
@@ -78,19 +75,26 @@ function Cart() {
         {console.log('-------cart--------', cart)}
         {console.log('~~~~~~~~~~~~~~~~~~~~~~~~~results', results)}
 
-        {results.map(result => (
-          <CartCard
-            title={result.title}
-            seller={result.seller}
-            short={result.short_description}
-            price={result.price}
-            key={result.length * Math.random()}
-            id={result._id}
-            img={result.img_URL[0].img}
-            remove={removeItem}
-            qty={resQty(result._id)}
-          />
-        ))}
+        {results.map(
+          result => (
+            resQty(result._id),
+            (
+              <CartCard
+                title={result.title}
+                seller={result.seller}
+                short={result.short_description}
+                price={result.price}
+                key={result.length * Math.random()}
+                id={result._id}
+                img={result.img_URL[0].img}
+                remove={removeItem}
+                qty={resQty(result._id)}
+                addQty={addQty}
+                // subQty={subQty}
+              />
+            )
+          )
+        )}
 
         {/* <div className="max-w-sm w-full lg:max-w-full lg:flex">
         <div
