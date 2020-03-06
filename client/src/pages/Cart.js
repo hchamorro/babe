@@ -10,6 +10,7 @@ function Cart() {
   function getCartData() {
     return Promise.all(cart.map(p => fetchData(p.id)));
   }
+
   function fetchData(id) {
     return API.productsAPI.findProduct(id).then(res => {
       return res.data;
@@ -33,10 +34,34 @@ function Cart() {
   //   });
 
   function removeItem(id) {
-    let resultsArray = results.filter(result => result._id !== id);
-    console.log('results array after filtering', resultsArray);
+    const resultsArray = results.filter(result => result._id !== id);
+    const updatedCart = cart.filter(p => p.id !== id);
+
+    // resultsArray.forEach(p => {
+    //   if (p.id === cart.id) {
+    //     updatedCart = {
+    //       id: p.id,
+    //       qty: cart.qty,
+    //       price: p.price
+    //     };
+    //   }
+    //   return updatedCart;
+    // });
+    // console.log('results array after filtering', resultsArray);
+    // console.log('updated cart...............', updatedCart);
     setResults(resultsArray);
-    setCart(resultsArray);
+    setCart(updatedCart);
+  }
+
+  function resQty(_id) {
+    let qty = 0;
+    cart.forEach(p => {
+      if (_id === p.id) {
+        qty = p.qty;
+      }
+    });
+    console.log('this is the quantitiy', _id, qty);
+    return qty;
   }
 
   if (results.length < 1) {
@@ -63,6 +88,7 @@ function Cart() {
             id={result._id}
             img={result.img_URL[0].img}
             remove={removeItem}
+            qty={resQty(result._id)}
           />
         ))}
 

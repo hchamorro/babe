@@ -31,12 +31,23 @@ function Shop() {
   // }
 
   function AddCart(id, qty, price) {
-    let p1 = new Promise((resolve, reject) => {
-      handleQty(id, qty, price);
-      // setCart([...cart, id]);
-      resolve(cart);
-    });
-    p1.then(updateUserDB(cart));
+    // let p1 = new Promise((resolve, reject) => {
+    //   // handleQty(id, qty, price);
+    //   // setCart([...cart, id]);
+
+    //   resolve(setCart([...cart, { id, qty, price }]));
+    // });
+    // p1.then(() => {
+    //   console.log('complete cart', cart);
+    //   updateUserDB(cart);
+    // });
+
+    // setCart([...cart, { id, qty, price }]);
+    // let tempArr = cart;
+    // tempArr.push({ id, qty, price });
+    // console.log('this is temp arr', tempArr);
+
+    handleCart(id, qty, price);
   }
 
   function updateUserDB(data) {
@@ -50,7 +61,7 @@ function Shop() {
       .catch(err => console.log(err));
   }
 
-  function handleQty(id, qty, price) {
+  function handleCart(id, qty, price) {
     const existingProduct = cart.filter(p => p.id === id);
     if (existingProduct.length > 0) {
       console.log('you already have this in cart');
@@ -60,8 +71,14 @@ function Shop() {
         qty: existingProduct[0].qty + qty
       };
       setCart([...withoutExistingProduct, updatedQty]);
+      let tempArr = cart;
+      tempArr.push([...withoutExistingProduct, updatedQty]);
+      updateUserDB(tempArr);
     } else {
       setCart([...cart, { id, qty, price }]);
+      let tempArr = cart;
+      tempArr.push({ id, qty, price });
+      updateUserDB(tempArr);
     }
   }
   // function updateUserDbCart(id) {
