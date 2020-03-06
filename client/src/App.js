@@ -52,7 +52,7 @@ function App() {
             <Route exact path={["/shop/:id"]} component={Products} />
 
             {/* footer */}
-            <footer className="flex">
+            <footer className="flex footer">
               <div></div>
               <div></div>
             </footer>
