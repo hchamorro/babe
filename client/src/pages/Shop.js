@@ -43,6 +43,18 @@ function Shop() {
     handleCart(id, qty, price, image);
   }
 
+  function sortProducts(value) {
+    console.log("YOU CLICKED ME!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", value);
+    const filterArray = products.filter(prod => {
+      if (prod.tags.toLowerCase() === value) {
+        return true;
+      }
+      return false;
+      console.log(prod);
+    });
+    console.log(filterArray, "************************************");
+  }
+
   function updateUserDB(data) {
     if (user.isLoggedIn) console.log("trying to update db");
     const id = user.id;
@@ -76,7 +88,13 @@ function Shop() {
   }
 
   return (
-    <div className="body-2 py-12 px-8">
+ <div>
+      <nav className="body-2 py-12 px-8 borders flex justify-between">
+        <div onClick={() => sortProducts("jewelry")}>Jewelry</div>
+
+        <div onClick={() => sortProducts("clothing")}>Clothing</div>
+      </nav>
+
       {console.log(" this is what the cart looks like on SHOP PAGE", cart)}
       {products.map(product => (
         <ProdCard
