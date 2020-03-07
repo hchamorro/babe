@@ -59,6 +59,10 @@
   border-bottom: 1px solid black;
 }
 
+.card-border {
+  border: #718eeb 2px solid;
+}
+
 .cart {
   color: #718eeb;
 }

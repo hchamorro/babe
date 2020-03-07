@@ -1,5 +1,5 @@
-import React from 'react';
-import '../assets/babe.css';
+import React from "react";
+import "../assets/babe.css";
 
 function ProdCard(props) {
   return (
