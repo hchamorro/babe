@@ -24,9 +24,7 @@ function Cart() {
   const totalPrice = cart.reduce((acc, curr) => acc + curr.price * curr.qty, 0);
 
   function removeItem(id) {
-    const resultsArray = results.filter(result => result._id !== id);
     const updatedCart = cart.filter(p => p.id !== id);
-    setResults(resultsArray);
     setCart(updatedCart);
   }
 
