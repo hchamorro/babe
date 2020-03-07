@@ -52,9 +52,20 @@ function App() {
             <Route exact path={["/shop/:id"]} component={Products} />
 
             {/* footer */}
-            <footer className="flex footer">
-              <div></div>
-              <div></div>
+            <footer className="footer">
+              {/* top part */}
+              <div className="flex">
+                {/* about / contact / join newsletter */}
+                <div>
+                  <p className="footer-links">About</p>
+                  <p>Contact</p>
+                  <p>Join Our Newsletter</p>
+                </div>
+                {/* for BABES only */}
+                <div className="babes-only">For B.A.B.Es Only</div>
+              </div>
+              {/* copyright */}
+              <div className="copyright">Copyright © 2020 B.A.B.E.</div>
             </footer>
           </CartProvider>
         </UserProvider>

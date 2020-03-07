@@ -11,6 +11,12 @@
   color: #e9afa3;
 }
 
+.babes-only {
+  color: white;
+  font-family: "made_canvasregular";
+  font-size: 50%;
+}
+
 .body {
   background-color: #f2eeec;
   font-family: "champagne__limousines";
@@ -53,6 +59,12 @@
   color: #e9afa3;
 }
 
+.copyright {
+  font-family: "champagne__limousinesbold";
+  color: white;
+  font-size: 50%;
+}
+
 /* regular */
 @font-face {
   font-family: "champagne__limousines";
@@ -90,6 +102,18 @@
 
 .footer {
   background-color: #e9afa3;
+  height: 10%;
+  width: 100%;
+}
+
+.footer-links {
+  color: white;
+  font-family: "champagne__limousinesbold";
+  font-size: 50%;
+}
+
+.footer-links:hover {
+  color: #718eeb;
 }
 
 .price {
