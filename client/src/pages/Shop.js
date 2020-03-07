@@ -68,7 +68,7 @@ function Shop() {
         
             <Link to={"/shop/" + product._id}>
                 <strong>
-                  See More
+                  {product.title}
                   {console.log('***************product detail page opened by id*****************')}
                 </strong>
             </Link>
