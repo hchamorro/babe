@@ -58,7 +58,7 @@ function Cart() {
     return <div className="body-2 py-12 px-8">No Items in cart</div>;
   } else {
     return (
-      <div className="body-2 py-12">
+      <div className="body-2 px-12 py-12">
         {cart.map(result => (
           <CartCard
             title={result.title}
@@ -76,7 +76,7 @@ function Cart() {
         ))}
 
         <div className="max-w-sm w-full lg:max-w-full py-8">
-          <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4  leading-normal w-1/4">
+          <div className="border-r border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4  leading-normal w-1/4">
             <div className="mb-8">
               <div className="flex mb-4">
                 <div className="w-1/2  h-12 text-gray-900 font-bold text-xl mb-2">
