@@ -18,9 +18,6 @@ function Navbar() {
       <Link className="a" to="/Wellness">
         Wellness
       </Link>
-      <Link className="a" to="/Cart">
-        Cart
-      </Link>
     </nav>
   );
 }

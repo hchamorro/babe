@@ -25,9 +25,7 @@ function App() {
             <header className="flex items-center justify-between px-8 py-6">
               {/* home button */}
               <div>
-                <button type="button" className="cart block">
-                  <img className="h-6" src={hamburger} alt="Home Button" />
-                </button>
+                <img className="h-6" src={hamburger} alt="Home Button" />
               </div>
               {/* BABE Logo */}
               <div>
@@ -38,13 +36,16 @@ function App() {
               {/* shopping cart */}
               <div>
                 <button type="button" className="cart block">
-                  <img className="cart h-8" src={shoppingBag} alt="cart" />
+                  <Link className="a" to="/Cart">
+                    <img className="cart h-8" src={shoppingBag} alt="cart" />
+                  </Link>
                 </button>
               </div>
             </header>
             {/* nav bar */}
             <Nav />
 
+            {/* body of pages */}
             <Route exact path={["/"]} component={Home} />
             <Route exact path={["/shop"]} component={Shop} />
             <Route exact path={["/about"]} component={About} />
@@ -56,18 +57,24 @@ function App() {
             {/* footer */}
             <footer className="footer">
               {/* top part */}
-              <div className="flex">
+              <div className="flex px-12 justify-between">
                 {/* about / contact / join newsletter */}
-                <div>
+                <div className="justify-start py-8">
                   <p className="footer-links">About</p>
-                  <p>Contact</p>
-                  <p>Join Our Newsletter</p>
+                  <p className="footer-links">Contact</p>
+                  <p className="footer-links">Join Our Newsletter</p>
                 </div>
+                {/* center for spacing purposes */}
+                <div>&nbsp;</div>
                 {/* for BABES only */}
-                <div className="babes-only">For B.A.B.Es Only</div>
+                <div className="justify-end">
+                  <p className="py-12 babes-only">For B.A.B.Es Only</p>
+                </div>
               </div>
               {/* copyright */}
-              <div className="copyright">Copyright © 2020 B.A.B.E.</div>
+              <div className="flex justify-center px-12">
+                <p className="copyright">Copyright © 2020 B.A.B.E.</p>
+              </div>
             </footer>
           </CartProvider>
         </UserProvider>

@@ -8,7 +8,7 @@ function Home() {
   useEffect(() => {}, []);
 
   return (
-    <section>
+    <section className="main body-2">
       {/* what's new */}
       <div className="flex justify-around subhead items-center py-8">
         what's new

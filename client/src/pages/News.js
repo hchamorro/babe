@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 function News() {
   const [results, setResults] = useState({});
 
   useEffect(() => {}, []);
 
-  return <div>Hello News</div>;
+  return <div className="body-2">Hello News</div>;
 }
 
 export default News;

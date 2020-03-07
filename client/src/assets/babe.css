@@ -14,7 +14,8 @@
 .babes-only {
   color: white;
   font-family: "made_canvasregular";
-  font-size: 50%;
+  font-size: 130%;
+  justify-content: right;
 }
 
 .body {
@@ -22,6 +23,13 @@
   font-family: "champagne__limousines";
   color: #293045;
   font-size: 160%;
+}
+
+/* sticky footer attributes */
+.body-2 {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .borders {
@@ -96,8 +104,7 @@
 /* canvas */
 @font-face {
   font-family: "made_canvasregular";
-  src: url("./font/MADE\ Canvas\ Regular\ PERSONAL\ USE.otf")
-    format("embedded-opentype");
+  src: url("./font/MADE\ Canvas\ Regular\ PERSONAL\ USE.otf") format("opentype");
 }
 
 .footer {
@@ -109,11 +116,15 @@
 .footer-links {
   color: white;
   font-family: "champagne__limousinesbold";
-  font-size: 50%;
+  font-size: 80%;
 }
 
 .footer-links:hover {
   color: #718eeb;
+}
+
+.main {
+  flex: 1;
 }
 
 .price {

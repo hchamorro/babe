@@ -10,7 +10,7 @@ function About() {
   useEffect(() => {}, []);
 
   return (
-    <div className="py-8">
+    <div className="body-2 py-12">
       {/* {oriana and izzy - row one} */}
       <div className="flex justify-around py-8">
         <div className="max-w-sm rounded overflow-hidden shadow-lg">

@@ -88,12 +88,13 @@ function Shop() {
   }
 
   return (
-    <div>
-      <nav className="borders flex justify-between px-64 py-10">
+ <div>
+      <nav className="body-2 py-12 px-8 borders flex justify-between">
         <div onClick={() => sortProducts("jewelry")}>Jewelry</div>
 
         <div onClick={() => sortProducts("clothing")}>Clothing</div>
       </nav>
+
       {console.log(" this is what the cart looks like on SHOP PAGE", cart)}
       {products.map(product => (
         <ProdCard
