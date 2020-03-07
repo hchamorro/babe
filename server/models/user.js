@@ -23,7 +23,8 @@ const UserSchema = new Schema({
       _id: false,
       id: { type: String, required: true },
       qty: { type: Number },
-      price: { type: Number }
+      price: { type: Number },
+      thumbnail: { type: String }
     }
   ],
   createdAt: {
