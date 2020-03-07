@@ -30,9 +30,7 @@ const productsSeed = [
           "https://dto508s2j2p46.cloudfront.net/system/spree/products/7748/large/Hue_Necklace_White_Topaz-Single-Side.jpg?1558707729"
       }
     ],
-    tags: "Jewelry",
-    tags: "Mejuri",
-    tags: "Necklace"
+    tags: "Jewelry"
   },
   {
     title: "Common Link Bracelet",
@@ -57,9 +55,7 @@ const productsSeed = [
           "https://d2adyl8yz1ff2n.cloudfront.net/spree/images/attachments/000/053/906/xlarge/open-uri20191206-17381-odbcau?1575670724"
       }
     ],
-    tags: "Jewelry",
-    tags: "Mejuri",
-    tags: "Bracelet"
+    tags: "Jewelry"
   },
   {
     title: "24/7 Pima Cotton T-Shirt Bra",
@@ -84,9 +80,7 @@ const productsSeed = [
           "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_CottonHipster_StormyLilac_B_PDP_01_2020_1295_150x.jpg?v=1581378647"
       }
     ],
-    tags: "ThirdLove",
-    tags: "Clothing",
-    tags: "Bras"
+    tags: "Clothing"
   },
   {
     title: "Eyelash Lace Plunge Bra",
@@ -111,9 +105,7 @@ const productsSeed = [
           "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2816-copy_150x.jpg?v=1572386416"
       }
     ],
-    tags: "ThirdLove",
-    tags: "Clothing",
-    tags: "Bras"
+    tags: "Clothing"
   },
   {
     title: "Sensitive Wash",
@@ -130,12 +122,7 @@ const productsSeed = [
           "https://cdn.shopify.com/s/files/1/0510/5657/products/products_0015_washes-sensitive-travel_2ca0fc46-7d81-4fc4-bea8-a88f07ea8648_1296x.jpg?v=1570724100"
       }
     ],
-    tags: "Health and Wellness",
-    tags: "Feminine Products",
-    tags: "the Honey Pot Company",
-    tags: "Feminine Wash",
-    tags: "Feminine Care",
-    tags: "Sensitive"
+    tags: "Health and Wellness"
   },
   {
     title: "Soothing Body Balm",
@@ -153,11 +140,7 @@ const productsSeed = [
           "https://cdn.shopify.com/s/files/1/0510/5657/products/12211_0069_Amazon_NEW_1512x.jpg?v=1575003798"
       }
     ],
-    tags: "Health and Wellness",
-    tags: "Soothing",
-    tags: "the Honey Pot Company",
-    tags: "Menstrual Products",
-    tags: "Menstrual Care"
+    tags: "Health and Wellness"
   },
   {
     title: "Cardboard applicator tampons",
@@ -174,11 +157,7 @@ const productsSeed = [
           "https://cdn.shopify.com/s/files/1/2568/9396/products/LOLADP_SHOT_21-010_03_960x822.jpg?v=1570654811"
       }
     ],
-    tags: "Health and Wellness",
-    tags: "MyLola",
-    tags: "Tampons",
-    tags: "MenstrualProducts",
-    tags: "Feminine Care"
+    tags: "Health and Wellness"
   },
   {
     title: "Ultra thin liners",
@@ -195,11 +174,7 @@ const productsSeed = [
           "https://cdn.shopify.com/s/files/1/2568/9396/products/LOLADP_SHOT_16-015_03_960x822.jpg?v=1570655018"
       }
     ],
-    tags: "Health and Wellness",
-    tags: "MyLola",
-    tags: "Pads",
-    tags: "Menstrual Products",
-    tags: "Feminine Care"
+    tags: "Health and Wellness"
   },
   {
     title: "Medium Shampoo",
@@ -216,10 +191,7 @@ const productsSeed = [
           "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Shampoo-Web_100x75.jpg?v=1581492943"
       }
     ],
-    tags: "Hair Care",
-    tags: "Ouai",
-    tags: "Beauty",
-    tags: "Shampoo"
+    tags: "Hair Care"
   }
 ];
 
