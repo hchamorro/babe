@@ -99,10 +99,6 @@ function Shop() {
                 </strong>
             </Link>
 
-
-          <Link className="a" to={'/shop/' + product._id}>
-            <strong>See More</strong>
-          </Link>
         </ProdCard>
       ))}
     </div>
