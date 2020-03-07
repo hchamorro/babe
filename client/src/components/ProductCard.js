@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/babe.css';
 
 function ProdCard(props) {
   return (
@@ -10,14 +11,18 @@ function ProdCard(props) {
         <div>{props.seller}</div>
         <p>{props.short}</p>
         <p className="text-gray-700 text-base">{props.description}</p>
-        <div>${props.price}</div>
-        <button
-          onClick={() => props.AddCart(props.id)}
-          className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-        >
-          Add to Cart
-        </button>
-        {props.children}
+        <div className="price">${props.price}</div>
+        <div className="flex justify-between">
+          <button
+            onClick={() =>
+              props.AddCart(props.id, props.qty, props.price, props.thumbnail)
+            }
+            className="add-to-cart bg-white hover:bg-gray-100 text-gray-800 font-semibold py-0 px-2 border border-gray-400 rounded shadow"
+          >
+            Add to Cart
+          </button>
+          {props.children}
+        </div>
       </div>
     </div>
   );

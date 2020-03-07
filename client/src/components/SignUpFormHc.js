@@ -30,7 +30,6 @@ const SignUpForm = () => {
   };
   return (
     <div className="w-full max-w-xs">
-      {console.log('Hey this is what the user is Right Now....', { user })}
       <form
         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         onSubmit={createUser}

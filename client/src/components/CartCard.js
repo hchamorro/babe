@@ -12,7 +12,9 @@ function CartCard(props) {
             {props.title}
           </div>
           <div className="flex content-between flex-wrap">
-            <p className="text-gray-700 text-base">${props.price}</p>{' '}
+            <p className="text-gray-700 text-base">${props.price}</p>
+            <p className="text-gray-700 text-base">QTY: {props.qty}</p>
+
             <button
               className="bg-white hover:bg-gray-100 text-gray-800 text-base font-semibold py-2 px-4 border border-gray-400 rounded shadow"
               onClick={() => props.remove(props.id)}
@@ -20,6 +22,8 @@ function CartCard(props) {
               Remove
             </button>
           </div>
+          <div onClick={() => props.addQty(props.id)}>+</div>
+          <div onClick={() => props.subQty(props.id)}>-</div>
         </div>
       </div>
     </div>

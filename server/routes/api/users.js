@@ -2,7 +2,7 @@ const router = require('express').Router();
 const isAuthenticated = require('../../config/isAuthenticated');
 const auth = require('../../config/auth');
 const usersController = require('../../controllers/userControllers');
-const db = require("../../models")
+const db = require('../../models');
 // LOGIN ROUTE
 router.route('/login').post((req, res) => {
   auth
@@ -17,13 +17,13 @@ router.route('/signup').post((req, res) => {
 });
 
 //update route
-router.route('/update/:id').post((req, res) => {
-  console.log(req.params.id);
-  // db.User.findById(req.params.id).then(data => {
-  //   console.log("did stuff")
-  //   console.log(data);
-  // })
-  db.User.update({ _id: req.params.id }, req.body)
+router.route('/update/:id').put((req, res) => {
+  console.log(req.body);
+  db.User.updateOne(
+    { _id: req.params.id },
+    //change push to only one string then maybe a req.body
+    { $set: { cart: req.body } }
+  )
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
 });

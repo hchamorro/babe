@@ -34,7 +34,8 @@ const LogInForm = () => {
             id: res.data.user._id,
             cart: res.data.user.cart
           });
-          setCart([...cart, res.data.user.cart]);
+
+          setCart([...cart, ...res.data.user.cart]);
         })
         .catch(err => console.log(err));
     }
@@ -42,8 +43,7 @@ const LogInForm = () => {
   };
   return (
     <div className="w-full max-w-xs">
-      {console.log('Hey this is what the user is Right Now....', user)}
-      {console.log('cart on the LOGIN? WELLNESS PAGE', cart)}
+      {console.log('cart on the LOGIN--WELLNESS PAGE', cart)}
       <form
         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         onSubmit={logIn}
