@@ -56,24 +56,28 @@ function App() {
 
             {/* footer */}
             <footer className="footer">
-              {/* top part */}
-              <div className="flex px-12 justify-between">
-                {/* about / contact / join newsletter */}
-                <div className="justify-start py-8">
-                  <p className="footer-links">About</p>
-                  <p className="footer-links">Contact</p>
-                  <p className="footer-links">Join Our Newsletter</p>
+              <div className="py-6">
+                {/* top part */}
+                <div className="flex px-12 justify-between">
+                  {/* about / contact / join newsletter */}
+                  <div className="justify-start">
+                    <Link className="footer-links a" to="/About">
+                      About
+                    </Link>
+                    <p className="footer-links">Contact</p>
+                    <p className="footer-links">Join Our Newsletter</p>
+                  </div>
+                  {/* center for spacing purposes */}
+                  <div>&nbsp;</div>
+                  {/* for BABES only */}
+                  <div className="justify-end">
+                    <p className="py-8 babes-only">For B.A.B.Es Only</p>
+                  </div>
                 </div>
-                {/* center for spacing purposes */}
-                <div>&nbsp;</div>
-                {/* for BABES only */}
-                <div className="justify-end">
-                  <p className="py-12 babes-only">For B.A.B.Es Only</p>
+                {/* copyright */}
+                <div className="flex justify-center">
+                  <p className="copyright">Copyright © 2020 B.A.B.E.</p>
                 </div>
-              </div>
-              {/* copyright */}
-              <div className="flex justify-center px-12">
-                <p className="copyright">Copyright © 2020 B.A.B.E.</p>
               </div>
             </footer>
           </CartProvider>
