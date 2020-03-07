@@ -23,7 +23,7 @@ function CartCard(props) {
             </button>
           </div>
           <div onClick={() => props.addQty(props.id)}>+</div>
-          <div onClick={() => props.subQty(props.id, props.qty)}>-</div>
+          <div onClick={() => props.subQty(props.id)}>-</div>
         </div>
       </div>
     </div>

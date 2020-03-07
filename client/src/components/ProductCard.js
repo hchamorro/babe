@@ -14,7 +14,9 @@ function ProdCard(props) {
         <div className="price">${props.price}</div>
         <div className="flex justify-between">
           <button
-            onClick={() => props.AddCart(props.id, props.qty, props.price)}
+            onClick={() =>
+              props.AddCart(props.id, props.qty, props.price, props.thumbnail)
+            }
             className="add-to-cart bg-white hover:bg-gray-100 text-gray-800 font-semibold py-0 px-2 border border-gray-400 rounded shadow"
           >
             Add to Cart
