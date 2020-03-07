@@ -59,6 +59,8 @@ function Shop() {
     setResults(filterArray);
   }
 
+  function sortSubProducts(value) {}
+
   function updateUserDB(data) {
     if (user.isLoggedIn) console.log("trying to update db");
     const id = user.id;
@@ -97,6 +99,12 @@ function Shop() {
         <div onClick={() => sortProducts("jewelry")}>Jewelry</div>
 
         <div onClick={() => sortProducts("clothing")}>Clothing</div>
+
+        <div onClick={() => sortProducts("health and wellness")}>
+          Health and Wellness
+        </div>
+
+        <div onClick={() => sortProducts("beauty")}>Beauty</div>
       </nav>
 
       {console.log(" this is what the cart looks like on SHOP PAGE", cart)}
