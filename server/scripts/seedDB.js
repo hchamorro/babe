@@ -100,6 +100,8 @@ const productsSeed = [
     tags: "the Honey Pot Company",
     tags: "Menstrual Prodcuts",
     tags: "Menstral Care",
+  }
+
     tags: "Feminine Care",
   },
   {
@@ -149,6 +151,7 @@ const productsSeed = [
     tags: "Beatuy",
     tags: "Shampoo"
   },
+
 ];
 
 const wellnessSeed = [

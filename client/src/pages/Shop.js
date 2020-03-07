@@ -91,6 +91,14 @@ function Shop() {
           qty={1}
         >
           {/* <Link to="">See More</Link> */}
+        
+            <Link to={"/shop/" + product._id}>
+                <strong>
+                  {product.title}
+                  {console.log('***************product detail page opened by id*****************')}
+                </strong>
+            </Link>
+
 
           <Link className="a" to={'/shop/' + product._id}>
             <strong>See More</strong>
