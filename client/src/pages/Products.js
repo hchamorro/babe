@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import API from "../utils/API";
 import { CartContext } from "../utils/context/CartContextHc";
@@ -7,7 +7,7 @@ import DetailsIE from "../components/DetailsIE";
 
 
 function Products(props) {
-    const [products, setProducts] = useState({})
+    const [product, setProduct] = useState({})
     const [results, setResults] = useState({});
     const [cart, setCart] = useContext(CartContext);
     const [user, setUser] = useContext(UserContext);
@@ -23,7 +23,7 @@ function Products(props) {
     function findProduct() {
         API.productsAPI
         .findProduct(id)
-        .then(res => setProducts(res.data))
+        .then(res => setProduct(res.data))
         .catch(err => console.log(err));  
     }
 
@@ -45,22 +45,37 @@ function Products(props) {
 
     return(
         <div>
-            {console.log('************************************Load Products by ID Here*********************************',products)}
-            {products.map(product => (
-                <DetailsIE 
-                    img={product.img_URL[0].img}
-                    title={product.title}
-                    seller={product.seller}
-                    description={product.description}
-                    price={product.price}
-                
-                >
+            {console.log('************************************Load Products by ID Here*********************************',product)}
+        { product && product.img_URL && (        
+        <DetailsIE
+            id={product._id}
+            img={product.img_URL[0].img}
+            title={product.title}
+            seller={product.seller}
+            description={product.description}
+            price={product.price}
 
-                </DetailsIE>
-            ))}
-        </div>
+            />
+        )
+    }
+    </div>
     );
 }
 
 export default Products; 
+
+
+// {products.map(product => (
+//     <DetailsIE 
+//         id={product._id}
+//         img={product.img_URL[0].img}
+//         title={product.title}
+//         seller={product.seller}
+//         description={product.description}
+//         price={product.price}
+    
+//     >
+
+//     </DetailsIE>
+// ))}
 
