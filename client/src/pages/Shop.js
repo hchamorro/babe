@@ -7,7 +7,7 @@ import { UserContext } from "../utils/context/UserContextHc";
 import "../assets/babe.css";
 
 function Shop() {
-  const [results, setResults] = useState({});
+  const [results, setResults] = useState([]);
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useContext(CartContext);
   const [user, setUser] = useContext(UserContext);
@@ -19,7 +19,10 @@ function Shop() {
   function findAllProducts() {
     API.productsAPI
       .getAllProducts()
-      .then(res => setProducts(res.data))
+      .then(res => {
+        setProducts(res.data);
+        setResults(res.data);
+      })
       .catch(err => console.log(err));
   }
 
@@ -53,6 +56,7 @@ function Shop() {
       console.log(prod);
     });
     console.log(filterArray, "************************************");
+    setResults(filterArray);
   }
 
   function updateUserDB(data) {
@@ -88,15 +92,15 @@ function Shop() {
   }
 
   return (
- <div>
-      <nav className="body-2 py-12 px-8 borders flex justify-between">
+    <div className="body-2 py-12 px-8">
+      <nav className="borders flex justify-between">
         <div onClick={() => sortProducts("jewelry")}>Jewelry</div>
 
         <div onClick={() => sortProducts("clothing")}>Clothing</div>
       </nav>
 
       {console.log(" this is what the cart looks like on SHOP PAGE", cart)}
-      {products.map(product => (
+      {results.map(product => (
         <ProdCard
           thumbnail={product.thumbnail}
           title={product.title}
