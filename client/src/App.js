@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Nav from "./components/Nav";
 import Shop from "./pages/Shop";
 import About from "./pages/About";
@@ -31,7 +31,9 @@ function App() {
               </div>
               {/* BABE Logo */}
               <div>
-                <img className="w-48" src={logo} alt="B.A.B.E. logo" />
+                <Link className="a" to="/">
+                  <img className="w-48" src={logo} alt="B.A.B.E. logo" />
+                </Link>
               </div>
               {/* shopping cart */}
               <div>

@@ -6,9 +6,6 @@ import "../../assets/babe.css";
 function Navbar() {
   return (
     <nav className="borders flex justify-between px-64 py-10">
-      <Link className="a" to="/">
-        B.A.B.E.
-      </Link>
       <Link className="a" to="/About">
         About
       </Link>
