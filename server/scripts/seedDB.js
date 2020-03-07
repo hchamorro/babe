@@ -7,14 +7,28 @@ const productsSeed = [
     title: "Hue Necklace",
     seller: "Mejuri",
     short_description: "14k Yellow Gold, White Topaz",
-    description: "This necklace is a subtle statement, indeed. A pop of color that will go with everything you own. Handcrafted in 14k solid gold with genuine white topaz gemstones. Embrace your inner artist and layer the Hue necklaces together.",
-    thumbnail: "https://dto508s2j2p46.cloudfront.net/system/spree/products/4881/large/Hue_Necklace_White_Topaz-Single-Front.jpg?1558707721",
+    description:
+      "This necklace is a subtle statement, indeed. A pop of color that will go with everything you own. Handcrafted in 14k solid gold with genuine white topaz gemstones. Embrace your inner artist and layer the Hue necklaces together.",
+    thumbnail:
+      "https://dto508s2j2p46.cloudfront.net/system/spree/products/4881/large/Hue_Necklace_White_Topaz-Single-Front.jpg?1558707721",
     price: 185,
     img_URL: [
-      { img: "https://dto508s2j2p46.cloudfront.net/system/spree/products/4881/large/Hue_Necklace_White_Topaz-Single-Front.jpg?1558707721" },
-      { img: "https://dto508s2j2p46.cloudfront.net/system/spree/products/7959/large/hue-necklace-white-topaz-cc.png?1559661449" },
-      { img: "https://dto508s2j2p46.cloudfront.net/system/spree/products/7961/large/hue-necklace-white-topaz-side-cc.png?1559661491" },
-      { img: "https://dto508s2j2p46.cloudfront.net/system/spree/products/7748/large/Hue_Necklace_White_Topaz-Single-Side.jpg?1558707729" }
+      {
+        img:
+          "https://dto508s2j2p46.cloudfront.net/system/spree/products/4881/large/Hue_Necklace_White_Topaz-Single-Front.jpg?1558707721"
+      },
+      {
+        img:
+          "https://dto508s2j2p46.cloudfront.net/system/spree/products/7959/large/hue-necklace-white-topaz-cc.png?1559661449"
+      },
+      {
+        img:
+          "https://dto508s2j2p46.cloudfront.net/system/spree/products/7961/large/hue-necklace-white-topaz-side-cc.png?1559661491"
+      },
+      {
+        img:
+          "https://dto508s2j2p46.cloudfront.net/system/spree/products/7748/large/Hue_Necklace_White_Topaz-Single-Side.jpg?1558707729"
+      }
     ],
     tags: "Jewelry",
     tags: "Mejuri",
@@ -24,134 +38,189 @@ const productsSeed = [
     title: "Common Link Bracelet",
     seller: "MM Druck",
     short_description: "Great minds link alike.",
-    description: "Interlocking hand-shaped links (one circle, one oval) each attach to a double stranded box chain, which meet in the middle through a classic toggle clasp. It’s all done in 18-karat gold for a simple, modernist charm bracelet that’s perfect for everyday.",
-    thumbnail: "https://d2adyl8yz1ff2n.cloudfront.net/spree/images/attachments/000/053/905/xlarge/open-uri20191206-17381-lpkynb?1575670720",
+    description:
+      "Interlocking hand-shaped links (one circle, one oval) each attach to a double stranded box chain, which meet in the middle through a classic toggle clasp. It’s all done in 18-karat gold for a simple, modernist charm bracelet that’s perfect for everyday.",
+    thumbnail:
+      "https://d2adyl8yz1ff2n.cloudfront.net/spree/images/attachments/000/053/905/xlarge/open-uri20191206-17381-lpkynb?1575670720",
     price: 202,
     img_URL: [
-      { img: "https://d2adyl8yz1ff2n.cloudfront.net/spree/images/attachments/000/053/905/xlarge/open-uri20191206-17381-lpkynb?1575670720" },
-      { img: "https://d2adyl8yz1ff2n.cloudfront.net/spree/images/attachments/000/053/907/xlarge/open-uri20191206-17381-ttbcfc?1575670727" },
-      { img: "https://d2adyl8yz1ff2n.cloudfront.net/spree/images/attachments/000/053/906/xlarge/open-uri20191206-17381-odbcau?1575670724" },
+      {
+        img:
+          "https://d2adyl8yz1ff2n.cloudfront.net/spree/images/attachments/000/053/905/xlarge/open-uri20191206-17381-lpkynb?1575670720"
+      },
+      {
+        img:
+          "https://d2adyl8yz1ff2n.cloudfront.net/spree/images/attachments/000/053/907/xlarge/open-uri20191206-17381-ttbcfc?1575670727"
+      },
+      {
+        img:
+          "https://d2adyl8yz1ff2n.cloudfront.net/spree/images/attachments/000/053/906/xlarge/open-uri20191206-17381-odbcau?1575670724"
+      }
     ],
     tags: "Jewelry",
     tags: "Mejuri",
-    tags: "Bracelet",
+    tags: "Bracelet"
   },
   {
     title: "24/7 Pima Cotton T-Shirt Bra",
     seller: "ThirdLove",
     short_description: "Day-long wear, comfortable t-shirt style bra",
-    description: "It’s here: Our most beloved bra, now in cotton. Soft, strong, and so breathable, our 24/7™ Pima Cotton T-Shirt Bra is made with Pima cotton for a luxurious feel. Our fresh, modern design pairs perfectly with classic elements like our memory foam cups and comfortable double-layer band. It’s an everyday bra’s highest calling.",
-    thumbnail: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_CottonHipster_StormyLilac_B_PDP_01_2020_1197_150x.jpg?v=1581378624",
+    description:
+      "It’s here: Our most beloved bra, now in cotton. Soft, strong, and so breathable, our 24/7™ Pima Cotton T-Shirt Bra is made with Pima cotton for a luxurious feel. Our fresh, modern design pairs perfectly with classic elements like our memory foam cups and comfortable double-layer band. It’s an everyday bra’s highest calling.",
+    thumbnail:
+      "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_CottonHipster_StormyLilac_B_PDP_01_2020_1197_150x.jpg?v=1581378624",
     price: 68,
     img_URL: [
-      { img: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_PRO_01_20203056_150x.jpg?v=1581378615" },
-      { img: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_CottonHipster_StormyLilac_B_PDP_01_2020_1267_150x.jpg?v=1581378637" },
-      { img: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_CottonHipster_StormyLilac_B_PDP_01_2020_1295_150x.jpg?v=1581378647" },
+      {
+        img:
+          "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_PRO_01_20203056_150x.jpg?v=1581378615"
+      },
+      {
+        img:
+          "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_CottonHipster_StormyLilac_B_PDP_01_2020_1267_150x.jpg?v=1581378637"
+      },
+      {
+        img:
+          "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_CottonHipster_StormyLilac_B_PDP_01_2020_1295_150x.jpg?v=1581378647"
+      }
     ],
     tags: "ThirdLove",
     tags: "Clothing",
-    tags: "Bras",
+    tags: "Bras"
   },
   {
     title: "Eyelash Lace Plunge Bra",
     seller: "ThirdLove",
     short_description: "Plunge style lace bra",
-    description: "Lace reinvented, we’ve transformed Parisian-inspired lace into a bra designed to appeal to you before anyone else. Created with dynamic layers of lace, sheer mesh and plunge-style memory foam cups, the Eyelash Lace Plunge forms to your breasts to give you a natural lift that can be enhanced with removable inserts. With a padded hook and eye, gold hardware and smooth band, this lace bra is your daily style starter.",
-    thumbnail: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2740_150x.jpg?v=1572386416",
+    description:
+      "Lace reinvented, we’ve transformed Parisian-inspired lace into a bra designed to appeal to you before anyone else. Created with dynamic layers of lace, sheer mesh and plunge-style memory foam cups, the Eyelash Lace Plunge forms to your breasts to give you a natural lift that can be enhanced with removable inserts. With a padded hook and eye, gold hardware and smooth band, this lace bra is your daily style starter.",
+    thumbnail:
+      "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2740_150x.jpg?v=1572386416",
     price: 76,
     img_URL: [
-      { img: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_PRO_08_2019-copy_150x.jpg?v=1572386416" },
-      { img: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2788_150x.jpg?v=1572386416" },
-      { img: "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2816-copy_150x.jpg?v=1572386416" },
+      {
+        img:
+          "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_PRO_08_2019-copy_150x.jpg?v=1572386416"
+      },
+      {
+        img:
+          "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2788_150x.jpg?v=1572386416"
+      },
+      {
+        img:
+          "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2816-copy_150x.jpg?v=1572386416"
+      }
     ],
     tags: "ThirdLove",
     tags: "Clothing",
-    tags: "Bras",
+    tags: "Bras"
   },
   {
     title: "Sensitive Wash",
     seller: "the Honey Pot Company",
     short_description: "Sensitive Feminine Wash",
-    description: "Use our sensitive feminine wash to boost moisture levels, calm irritation, and balance your pH while gently cleansing your most delicate parts. No itching, no burning, no worries, girl. The formula for this intimate cleanser for sensitive skin is 100% natural and made with herbal ingredients.",
-    thumbnail: "https://cdn.shopify.com/s/files/1/0510/5657/products/12083_021_Pink_Amazon_NEW_1296x.jpg?v=1575003796",
+    description:
+      "Use our sensitive feminine wash to boost moisture levels, calm irritation, and balance your pH while gently cleansing your most delicate parts. No itching, no burning, no worries, girl. The formula for this intimate cleanser for sensitive skin is 100% natural and made with herbal ingredients.",
+    thumbnail:
+      "https://cdn.shopify.com/s/files/1/0510/5657/products/12083_021_Pink_Amazon_NEW_1296x.jpg?v=1575003796",
     price: 9.99,
     img_URL: [
-      { img: "https://cdn.shopify.com/s/files/1/0510/5657/products/products_0015_washes-sensitive-travel_2ca0fc46-7d81-4fc4-bea8-a88f07ea8648_1296x.jpg?v=1570724100" },
+      {
+        img:
+          "https://cdn.shopify.com/s/files/1/0510/5657/products/products_0015_washes-sensitive-travel_2ca0fc46-7d81-4fc4-bea8-a88f07ea8648_1296x.jpg?v=1570724100"
+      }
     ],
     tags: "Health and Wellness",
     tags: "Feminine Products",
     tags: "the Honey Pot Company",
     tags: "Feminine Wash",
     tags: "Feminine Care",
-    tags: "Sensitive",
+    tags: "Sensitive"
   },
   {
     title: "Soothing Body Balm",
     seller: "the Honey Pot Company",
-    short_description: "Calm cramps and discomfort with our Soothing Body Balm.",
-    description: "Feel aches and pains melt away as this magic formula minimizes menstrual cramps, lower back pain, foot pain, and more. This body salve is infused with natural magnesium for menstrual cramps and 500 mg of broad-spectrum hemp distillate. This hemp and magnesium body balm does not contain THC. To use the calming, pain relief salve, apply a dime-sized amount on the lower abdomen (beneath the belly button, above the pelvis), lower back, hands, or feet.",
-    thumbnail: "https://cdn.shopify.com/s/files/1/0510/5657/products/12211_0069_Amazon_NEW_1512x.jpg?v=1575003798",
+    short_description:
+      "Calm cramps and discomfort with our Soothing Body Balm.",
+    description:
+      "Feel aches and pains melt away as this magic formula minimizes menstrual cramps, lower back pain, foot pain, and more. This body salve is infused with natural magnesium for menstrual cramps and 500 mg of broad-spectrum hemp distillate. This hemp and magnesium body balm does not contain THC. To use the calming, pain relief salve, apply a dime-sized amount on the lower abdomen (beneath the belly button, above the pelvis), lower back, hands, or feet.",
+    thumbnail:
+      "https://cdn.shopify.com/s/files/1/0510/5657/products/12211_0069_Amazon_NEW_1512x.jpg?v=1575003798",
     price: 35.99,
     img_URL: [
-      { img: "https://cdn.shopify.com/s/files/1/0510/5657/products/12211_0069_Amazon_NEW_1512x.jpg?v=1575003798" },
+      {
+        img:
+          "https://cdn.shopify.com/s/files/1/0510/5657/products/12211_0069_Amazon_NEW_1512x.jpg?v=1575003798"
+      }
     ],
     tags: "Health and Wellness",
     tags: "Soothing",
     tags: "the Honey Pot Company",
-    tags: "Menstrual Prodcuts",
-    tags: "Menstral Care",
-  }
-
-    tags: "Feminine Care",
+    tags: "Menstrual Products",
+    tags: "Menstrual Care"
   },
   {
     title: "Cardboard applicator tampons",
     seller: "MyLola",
     short_description: "Cardboard applicator tampons, 18 count",
-    description: "No plastic, no problem. These tampons offer serious leak protection, with a smooth, curved tip applicator for added comfort.",
-    thumbnail: "https://cdn.shopify.com/s/files/1/2568/9396/products/LOLADP_SHOT_08-050_03_16a8cb13-ab4e-4615-a128-df07c2ed3c0e_960x822.jpg?v=1570654805",
+    description:
+      "No plastic, no problem. These tampons offer serious leak protection, with a smooth, curved tip applicator for added comfort.",
+    thumbnail:
+      "https://cdn.shopify.com/s/files/1/2568/9396/products/LOLADP_SHOT_08-050_03_16a8cb13-ab4e-4615-a128-df07c2ed3c0e_960x822.jpg?v=1570654805",
     price: 8,
     img_URL: [
-      { img: "https://cdn.shopify.com/s/files/1/2568/9396/products/LOLADP_SHOT_21-010_03_960x822.jpg?v=1570654811" },
+      {
+        img:
+          "https://cdn.shopify.com/s/files/1/2568/9396/products/LOLADP_SHOT_21-010_03_960x822.jpg?v=1570654811"
+      }
     ],
     tags: "Health and Wellness",
     tags: "MyLola",
     tags: "Tampons",
-    tags: "Menstral Products",
-    tags: "Feminine Care",
+    tags: "MenstrualProducts",
+    tags: "Feminine Care"
   },
   {
     title: "Ultra thin liners",
     seller: "MyLola",
     short_description: "Ultra thin liners, 28 count",
-    description: "Slim, but never skimpy on leak protection. Perfect for your period’s lighter days. Or when you want an extra line of defense.",
-    thumbnail: "https://cdn.shopify.com/s/files/1/2568/9396/products/LOLADP_SHOT_34-010_04_960x822.jpg?v=1570655011",
+    description:
+      "Slim, but never skimpy on leak protection. Perfect for your period’s lighter days. Or when you want an extra line of defense.",
+    thumbnail:
+      "https://cdn.shopify.com/s/files/1/2568/9396/products/LOLADP_SHOT_34-010_04_960x822.jpg?v=1570655011",
     price: 9,
     img_URL: [
-      { img: "https://cdn.shopify.com/s/files/1/2568/9396/products/LOLADP_SHOT_16-015_03_960x822.jpg?v=1570655018" },
+      {
+        img:
+          "https://cdn.shopify.com/s/files/1/2568/9396/products/LOLADP_SHOT_16-015_03_960x822.jpg?v=1570655018"
+      }
     ],
     tags: "Health and Wellness",
     tags: "MyLola",
     tags: "Pads",
-    tags: "Menstral Products",
-    tags: "Feminine Care",
+    tags: "Menstrual Products",
+    tags: "Feminine Care"
   },
   {
     title: "Medium Shampoo",
     seller: "Ouai",
     short_description: "Shampoo for Medium Hair",
-    description: "Need a glow up? This hydrating shampoo nourishes with babassu and coconut oils, strengthens with keratin and adds shine with kumquat extract. Hair is left shiny, silky and flirty - so you can update that profile pic.",
-    thumbnail: "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Shampoo-Web_100x75.jpg?v=1581492943",
+    description:
+      "Need a glow up? This hydrating shampoo nourishes with babassu and coconut oils, strengthens with keratin and adds shine with kumquat extract. Hair is left shiny, silky and flirty - so you can update that profile pic.",
+    thumbnail:
+      "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Shampoo-Web_100x75.jpg?v=1581492943",
     price: 28,
     img_URL: [
-      { img: "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Shampoo-Web_100x75.jpg?v=1581492943" },
+      {
+        img:
+          "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Shampoo-Web_100x75.jpg?v=1581492943"
+      }
     ],
     tags: "Hair Care",
     tags: "Ouai",
-    tags: "Beatuy",
+    tags: "Beauty",
     tags: "Shampoo"
-  },
-
+  }
 ];
 
 const wellnessSeed = [
@@ -159,15 +228,18 @@ const wellnessSeed = [
     title: "Lola",
     source: "https://mylola.com",
     description: "reproductive care by women, for women",
-    thumbnail_url: "https://cdn.shopify.com/s/files/1/2568/9396/t/3/assets/tampons-hand-desktop-1562940697247.jpg",
-    tags: "Health and Wellness",
+    thumbnail_url:
+      "https://cdn.shopify.com/s/files/1/2568/9396/t/3/assets/tampons-hand-desktop-1562940697247.jpg",
+    tags: "Health and Wellness"
   },
   {
     title: "Dr. Jen Gunter",
     source: "https://drjengunter.com/",
-    description: "Wielding the Lasso of Truth | I am an OB/GYN and a pain medicine physician. I write a lot about sex, science, and social media, but sometimes I write about other things because, well, why not?",
-    thumbnail_url: "https://drjengunter.files.wordpress.com/2019/07/jen-gunter-headshot-tinified.jpg",
-    tags: "Health and Wellness",
+    description:
+      "Wielding the Lasso of Truth | I am an OB/GYN and a pain medicine physician. I write a lot about sex, science, and social media, but sometimes I write about other things because, well, why not?",
+    thumbnail_url:
+      "https://drjengunter.files.wordpress.com/2019/07/jen-gunter-headshot-tinified.jpg",
+    tags: "Health and Wellness"
   }
 ];
 
@@ -175,9 +247,11 @@ const newsSeed = [
   {
     title: "Lab-Grown Breast Milk: Why?",
     publisher: "The Atlantic",
-    source: "https://medium.com/the-atlantic/lab-grown-breast-milk-why-5ff1dd6e41c5",
-    description: "The obsession with breastfeeding has inspired a start-up to make human milk outside the human body.",
-    thumbnail_url: "https://miro.medium.com/max/1920/0*bG2exTRrmq4udarA.jpg",
+    source:
+      "https://medium.com/the-atlantic/lab-grown-breast-milk-why-5ff1dd6e41c5",
+    description:
+      "The obsession with breastfeeding has inspired a start-up to make human milk outside the human body.",
+    thumbnail_url: "https://miro.medium.com/max/1920/0*bG2exTRrmq4udarA.jpg"
   }
 ];
 
