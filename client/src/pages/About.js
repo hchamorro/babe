@@ -18,7 +18,7 @@ function About() {
           <div className="px-6 py-4">
             <div className="">Oriana Dentici</div>
             <p className="text-gray-700 text-base">
-              <span classname="">
+              <span className="">
                 Who is a woman that has inspired you or your career?{" "}
                 <div>
                   Mia Hamm; as a kid I idolized her and started taking soccer
@@ -26,7 +26,7 @@ function About() {
                 </div>
               </span>
               <div>&nbsp;</div>
-              <span classname="">
+              <span className="">
                 Why are you passionate about this project?{" "}
                 <div>
                   I feel that it is important to give women, women-identifying,
@@ -34,7 +34,7 @@ function About() {
                 </div>
               </span>
               <div>&nbsp;</div>
-              <span classname="">
+              <span className="">
                 3 Fun Facts About You:
                 <ul>
                   <li>
@@ -57,7 +57,7 @@ function About() {
           <div className="px-6 py-4">
             <div className="">Izzy Edson</div>
             <p className="text-gray-700 text-base">
-              <span classname="">
+              <span className="">
                 Who is a woman that has inspired you or your career?{" "}
                 <div>
                   Mia Hamm; as a kid I idolized her and started taking soccer
@@ -65,7 +65,7 @@ function About() {
                 </div>
               </span>
               <div>&nbsp;</div>
-              <span classname="">
+              <span className="">
                 Why are you passionate about this project?{" "}
                 <div>
                   I feel that it is important to give women, women-identifying,
@@ -73,7 +73,7 @@ function About() {
                 </div>
               </span>
               <div>&nbsp;</div>
-              <span classname="">
+              <span className="">
                 3 Fun Facts About You:
                 <ul>
                   <li>
@@ -95,7 +95,7 @@ function About() {
           <div className="px-6 py-4">
             <div className="">Hannah Chamorro</div>
             <p className="text-gray-700 text-base">
-              <span classname="">
+              <span className="">
                 Who is a woman that has inspired you or your career?{" "}
                 <div>
                   Mia Hamm; as a kid I idolized her and started taking soccer
@@ -103,7 +103,7 @@ function About() {
                 </div>
               </span>
               <div>&nbsp;</div>
-              <span classname="">
+              <span className="">
                 Why are you passionate about this project?{" "}
                 <div>
                   I feel that it is important to give women, women-identifying,
@@ -111,7 +111,7 @@ function About() {
                 </div>
               </span>
               <div>&nbsp;</div>
-              <span classname="">
+              <span className="">
                 3 Fun Facts About You:
                 <ul>
                   <li>1. I'm a coding BAMF </li>
@@ -128,7 +128,7 @@ function About() {
           <div className="px-6 py-4">
             <div className="">Jo Sowa</div>
             <p className="text-gray-700 text-base">
-              <span classname="">
+              <span className="">
                 Who is a woman that has inspired you or your career?{" "}
                 <div>
                   Mia Hamm; as a kid I idolized her and started taking soccer
@@ -136,7 +136,7 @@ function About() {
                 </div>
               </span>
               <div>&nbsp;</div>
-              <span classname="">
+              <span className="">
                 Why are you passionate about this project?{" "}
                 <div>
                   I feel that it is important to give women, women-identifying,
@@ -144,7 +144,7 @@ function About() {
                 </div>
               </span>
               <div>&nbsp;</div>
-              <span classname="">
+              <span className="">
                 3 Fun Facts About You:
                 <ul>
                   <li>
