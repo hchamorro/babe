@@ -23,14 +23,7 @@ function Shop() {
       .catch(err => console.log(err));
   }
 
-  // function AddCart(id) {
-  //   setCart([...cart, id]);
-  //   if (user.isLoggedIn) {
-  //     updateUserDB();
-  //   }
-  // }
-
-  function AddCart(id, qty, price) {
+  function AddCart(id, qty, price, image) {
     // let p1 = new Promise((resolve, reject) => {
     //   // handleQty(id, qty, price);
     //   // setCart([...cart, id]);
@@ -47,7 +40,7 @@ function Shop() {
     // tempArr.push({ id, qty, price });
     // console.log('this is temp arr', tempArr);
 
-    handleCart(id, qty, price);
+    handleCart(id, qty, price, image);
   }
 
   function updateUserDB(data) {
@@ -61,7 +54,7 @@ function Shop() {
       .catch(err => console.log(err));
   }
 
-  function handleCart(id, qty, price) {
+  function handleCart(id, qty, price, thumbnail) {
     const existingProduct = cart.filter(p => p.id === id);
     if (existingProduct.length > 0) {
       console.log('you already have this in cart');
@@ -75,31 +68,12 @@ function Shop() {
       tempArr.push([...withoutExistingProduct, updatedQty]);
       updateUserDB(tempArr);
     } else {
-      setCart([...cart, { id, qty, price }]);
+      setCart([...cart, { id, qty, price, thumbnail }]);
       let tempArr = cart;
       tempArr.push({ id, qty, price });
       updateUserDB(tempArr);
     }
   }
-  // function updateUserDbCart(id) {
-  //   return new Promise(resolve => {
-  //     setCart([...cart, id]);
-  //     updateUserDbCart();
-  //   });
-  // }
-  // async function AddCart() {
-  //   const cart = await updateUserDbCart();
-  //   if (user.isLoggedIn) {
-  //     console.log('trying to update db');
-  //     const id = user.id;
-  //     API.userAPI
-  //       .updateUserCart(id, cart)
-  //       .then(res => {
-  //         console.log('^^^^^^^^', res);
-  //       })
-  //       .catch(err => console.log(err));
-  //   }
-  // }
 
   return (
     <div>
