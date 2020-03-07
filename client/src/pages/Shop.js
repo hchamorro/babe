@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useContext } from 'react';
-import ProdCard from '../components/ProductCard';
-import { Link } from 'react-router-dom';
-import API from '../utils/API';
-import { CartContext } from '../utils/context/CartContextHc';
-import { UserContext } from '../utils/context/UserContextHc';
-import '../assets/babe.css';
+import React, { useEffect, useState, useContext } from "react";
+import ProdCard from "../components/ProductCard";
+import { Link } from "react-router-dom";
+import API from "../utils/API";
+import { CartContext } from "../utils/context/CartContextHc";
+import { UserContext } from "../utils/context/UserContextHc";
+import "../assets/babe.css";
 
 function Shop() {
   const [results, setResults] = useState({});
@@ -44,12 +44,12 @@ function Shop() {
   }
 
   function updateUserDB(data) {
-    if (user.isLoggedIn) console.log('trying to update db');
+    if (user.isLoggedIn) console.log("trying to update db");
     const id = user.id;
     API.userAPI
       .updateUserCart(id, data)
       .then(res => {
-        console.log('^^^^^^^^', res);
+        console.log("^^^^^^^^", res);
       })
       .catch(err => console.log(err));
   }
@@ -57,7 +57,7 @@ function Shop() {
   function handleCart(id, qty, price, thumbnail) {
     const existingProduct = cart.filter(p => p.id === id);
     if (existingProduct.length > 0) {
-      console.log('you already have this in cart');
+      console.log("you already have this in cart");
       const withoutExistingProduct = cart.filter(p => p.id !== id);
       const updatedQty = {
         ...existingProduct[0],
@@ -76,8 +76,8 @@ function Shop() {
   }
 
   return (
-    <div>
-      {console.log(' this is what the cart looks like on SHOP PAGE', cart)}
+    <div className="body-2 py-12 px-8">
+      {console.log(" this is what the cart looks like on SHOP PAGE", cart)}
       {products.map(product => (
         <ProdCard
           thumbnail={product.thumbnail}
@@ -91,14 +91,15 @@ function Shop() {
           qty={1}
         >
           {/* <Link to="">See More</Link> */}
-        
-            <Link to={"/shop/" + product._id}>
-                <strong>
-                  {product.title}
-                  {console.log('***************product detail page opened by id*****************')}
-                </strong>
-            </Link>
 
+          <Link to={"/shop/" + product._id}>
+            <strong>
+              {product.title}
+              {console.log(
+                "***************product detail page opened by id*****************"
+              )}
+            </strong>
+          </Link>
         </ProdCard>
       ))}
     </div>

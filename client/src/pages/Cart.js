@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { CartContext } from '../utils/context/CartContextHc';
-import CartCard from '../components/CartCard';
-import API from '../utils/API';
+import React, { useEffect, useState, useContext } from "react";
+import { CartContext } from "../utils/context/CartContextHc";
+import CartCard from "../components/CartCard";
+import API from "../utils/API";
 
 function Cart() {
   const [cart, setCart] = useContext(CartContext);
@@ -55,10 +55,10 @@ function Cart() {
   }
 
   if (cart.length < 1) {
-    return <div>No Items in cart</div>;
+    return <div className="body-2 py-12 px-8">No Items in cart</div>;
   } else {
     return (
-      <div>
+      <div className="body-2 py-12">
         {cart.map(result => (
           <CartCard
             title={result.title}
@@ -75,10 +75,10 @@ function Cart() {
           />
         ))}
 
-        <div className="max-w-sm w-full lg:max-w-full ">
+        <div className="max-w-sm w-full lg:max-w-full py-8">
           <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4  leading-normal w-1/4">
             <div className="mb-8">
-              <div className="flex  mb-4">
+              <div className="flex mb-4">
                 <div className="w-1/2  h-12 text-gray-900 font-bold text-xl mb-2">
                   Total
                 </div>
