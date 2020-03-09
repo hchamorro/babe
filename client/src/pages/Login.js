@@ -1,10 +1,11 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+
 import { UserContext } from '../utils/context/UserContextHc';
 import { CartContext } from '../utils/context/CartContextHc';
 import API from '../utils/API';
 
-const LogInForm = () => {
+const LogIm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassord] = useState('');
   const [user, setUser] = useContext(UserContext);
@@ -86,16 +87,17 @@ const LogInForm = () => {
           >
             Submit
           </button>
-          <a
+
+          <Link
             className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-            href="#"
+            to="/signup"
           >
-            Sign Up{' '}
-          </a>
+            Sign Up
+          </Link>
         </div>
       </form>
     </div>
   );
 };
 
-export default LogInForm;
+export default LogIm;
