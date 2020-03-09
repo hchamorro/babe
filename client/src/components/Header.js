@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Link } from 'react-router-dom';
-import logo from './assets/BABE-192-logo.png';
-import shoppingBag from './assets/shopping-bag.svg';
-import hamburger from './assets/bars-solid.svg';
+import logo from '../assets/BABE-logo192.png';
+import shoppingBag from '../assets/shopping-bag.svg';
+import hamburger from '../assets/bars-solid.svg';
 
 import '../assets/babe.css';
 
