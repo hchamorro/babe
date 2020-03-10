@@ -6,6 +6,7 @@ function NewsCard(props) {
       <h3>{props.headline}</h3>
       <div className="mb-6 text-lg font-bold">
         <p className="block text-gray-700 text-base  mb-2">{props.snippet}</p>
+        <p className="block text-gray-700 text-base  mb-2">{props.paragraph}</p>
 
         <p className="block text-gray-700 text-sm font-bold mb-2">
           {props.web_url}

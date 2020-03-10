@@ -23,7 +23,6 @@ function News() {
     API.newsAPI
       .getWomenScience()
       .then(res => {
-        console.log(('women and science!!', res.data));
         setResults(res.data);
       })
       .catch(err => console.log(err));
@@ -46,6 +45,7 @@ function News() {
             headline={article.headline.main}
             snippet={article.snippet}
             web_url={article.web_url}
+            paragraph={article.lead_paragraph}
             key={results.length * Math.random()}
           />
         ))}
