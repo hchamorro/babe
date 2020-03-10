@@ -5,11 +5,12 @@ import { UserContext } from '../utils/context/UserContextHc';
 import { CartContext } from '../utils/context/CartContextHc';
 import API from '../utils/API';
 
-const LogIm = () => {
+const LogIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassord] = useState('');
   const [user, setUser] = useContext(UserContext);
   const [cart, setCart] = useContext(CartContext);
+  const [error, setError] = useState(false);
 
   const updateEmail = e => {
     setEmail(e.target.value);
@@ -45,7 +46,7 @@ const LogIm = () => {
 
           setCart(verifiedCart);
         })
-        .catch(err => console.log(err));
+        .catch(err => setError(true));
     }
     // setUser({ isLoggedIn: true, email: email, id: '' });
   };
@@ -106,4 +107,4 @@ const LogIm = () => {
   );
 };
 
-export default LogIm;
+export default LogIn;
