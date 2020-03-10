@@ -25,8 +25,10 @@ const SignUpForm = () => {
           email: email,
           cart: []
         })
-        .then(res => console.log('it should be saved'))
-        .catch(err => console.log(err));
+        .then(res => console.log(res))
+        .catch(err => {
+          console.log(err);
+        });
     }
     setUser({ isLoggedIn: true, email: email });
   };
@@ -77,7 +79,7 @@ const SignUpForm = () => {
             className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
             to="/login"
           >
-            Sign Up
+            Log In
           </Link>
         </div>
       </form>
