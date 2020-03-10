@@ -185,6 +185,25 @@ const productsSeed = [
     tagstwo: "Menstrual Products"
   },
   {
+    title: "Flex Menstrual Cup",
+    seller: "Flex",
+    short_description: "Menstrual Cup",
+    description:
+      "Unsure about cups? Start with FLEX. Our reusable FLEX Cup makes removal easy and less messy with an adjustable pull tab that breaks the seal for you, allowing for a clean and controlled removal experience. Our super-soft, form-fitting material makes it even more comfortable for beginners. Plus, it lasts for years saving you money and creating zero waste along the way. FLEX Cup comes in two sizes so you can choose the perfect fit for your body. Not sure which one is for you? Don't stress. If your cup doesn’t fit, we've got your back. Contact us and we'll switch it out for another size. Made of velvety-soft 100% medical-grade silicone in the USA.",
+    thumbnail:
+      "https://cdn.shopify.com/s/files/1/1097/9960/products/2-DetailProduct-Cup-Slim_600x551.jpg?v=1570138280",
+    price: 39.99,
+    img_URL: [
+      {
+        img:
+          "https://cdn.shopify.com/s/files/1/1097/9960/files/FLEX_Cup_Image_3_Desktop_600x551.jpg?v=1570645501"
+      }
+    ],
+    tags: "Health and Wellness",
+    tagstwo: "Menstrual Products"
+  },
+
+  {
     title: "Medium Shampoo",
     seller: "Ouai",
     short_description: "Shampoo for Medium Hair",
@@ -197,6 +216,24 @@ const productsSeed = [
       {
         img:
           "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Shampoo-Web_100x75.jpg?v=1581492943"
+      }
+    ],
+    tags: "Beauty",
+    tagstwo: "Hair Care"
+  },
+  {
+    title: "Medium Conditioner",
+    seller: "Ouai",
+    short_description: "Conditioner for Medium Hair",
+    description:
+      "Feeling out of control? This hydrating conditioner makes hair (and life) easier to manage - promise. Strengthening keratin, nourishing babassu and coconut oils and kumquat extract leave hair shiny, silky and smooth. Hair so good you won't even notice that Mercury is in retrograde.",
+    thumbnail:
+      "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Shampoo-Web_100x75.jpg?v=1581492943",
+    price: 28,
+    img_URL: [
+      {
+        img:
+          "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Conditioner-Web_1000x750.jpg?v=1581492925"
       }
     ],
     tags: "Beauty",
