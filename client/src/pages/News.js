@@ -30,7 +30,6 @@ function News() {
 
   return (
     <>
-      {console.log('results wooOoo', results)}
       <div className="grid grid-cols-6 gap-4">
         <NewsCard
           headline="College Majors That Put Women on Equal Footing With

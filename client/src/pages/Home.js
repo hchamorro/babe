@@ -1,11 +1,10 @@
-import React, { useEffect, useState, useContext } from "react";
-import ProdCard from "../components/ProductCard";
-import "../assets/babe.css";
-import API from "../utils/API";
-import { CartContext } from "../utils/context/CartContextHc";
-import { UserContext } from "../utils/context/UserContextHc";
-import { Link } from "react-router-dom";
-
+import React, { useEffect, useState, useContext } from 'react';
+import ProdCard from '../components/ProductCard';
+import '../assets/babe.css';
+import API from '../utils/API';
+import { CartContext } from '../utils/context/CartContextHc';
+import { UserContext } from '../utils/context/UserContextHc';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [results, setResults] = useState([]);
@@ -28,40 +27,22 @@ function Home() {
   }
 
   function AddCart(id, qty, price, image) {
-    // let p1 = new Promise((resolve, reject) => {
-    //   // handleQty(id, qty, price);
-    //   // setCart([...cart, id]);
-
-    //   resolve(setCart([...cart, { id, qty, price }]));
-    // });
-    // p1.then(() => {
-    //   console.log('complete cart', cart);
-    //   updateUserDB(cart);
-    // });
-
-    // setCart([...cart, { id, qty, price }]);
-    // let tempArr = cart;
-    // tempArr.push({ id, qty, price });
-    // console.log('this is temp arr', tempArr);
-
     handleCart(id, qty, price, image);
   }
 
   function updateUserDB(data) {
-    if (user.isLoggedIn) console.log("trying to update db");
-    const id = user.id;
-    API.userAPI
-      .updateUserCart(id, data)
-      .then(res => {
-        console.log("^^^^^^^^", res);
-      })
-      .catch(err => console.log(err));
+    if (user.isLoggedIn) {
+      const id = user.id;
+      API.userAPI
+        .updateUserCart(id, data)
+        .then(res => {})
+        .catch(err => console.log(err));
+    }
   }
 
   function handleCart(id, qty, price, thumbnail) {
     const existingProduct = cart.filter(p => p.id === id);
     if (existingProduct.length > 0) {
-      console.log("you already have this in cart");
       const withoutExistingProduct = cart.filter(p => p.id !== id);
       const updatedQty = {
         ...existingProduct[0],
@@ -79,8 +60,6 @@ function Home() {
     }
   }
 
-
-
   return (
     <section className="main body-2">
       {/* what's new */}
@@ -89,27 +68,20 @@ function Home() {
       </div>
       <div className="flex items-center justify-around px-12 py-8">
         {results.map(product => (
-        <ProdCard
-          thumbnail={product.thumbnail}
-          title={product.title}
-          price={product.price}
-          AddCart={AddCart}
-          key={product._id}
-          id={product._id}
-          qty={1}
-        >
-          {/* <Link to="">See More</Link> */}
-
-          <Link to={"/shop/" + product._id}>
-            <strong>
-              See More
-              {console.log(
-                "***************product detail page opened by id*****************"
-              )}
-            </strong>
-          </Link>
-        </ProdCard>
-      ))}
+          <ProdCard
+            thumbnail={product.thumbnail}
+            title={product.title}
+            price={product.price}
+            AddCart={AddCart}
+            key={product._id}
+            id={product._id}
+            qty={1}
+          >
+            <Link to={'/shop/' + product._id}>
+              <strong>See More</strong>
+            </Link>
+          </ProdCard>
+        ))}
       </div>
       {/* trending */}
       <div className="flex justify-around subhead-2 items-center py-8">
