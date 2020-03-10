@@ -15,6 +15,7 @@ import Nav from './components/Nav';
 import { UserProvider } from './utils/context/UserContextHc';
 import { CartProvider } from './utils/context/CartContextHc';
 import './assets/babe.css';
+import Checkout from './pages/Checkout';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route exact path={['/signup']} component={SignUp} />
 
             <Route path={['/shop/:id']} component={Products} />
+            <Route exact path={['/checkout']} component={Checkout} />
 
             {/* footer */}
             <Footer />
