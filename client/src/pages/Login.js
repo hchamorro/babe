@@ -62,7 +62,7 @@ const LogIn = () => {
           <h3>Log In</h3>
           {error ? (
             <p className="inline-block align-baseline font-bold text-base text-red-500 hover:text-blue-800">
-              * Invalid email or passord
+              * Invalid email or password
             </p>
           ) : null}
 
