@@ -46,6 +46,7 @@ function News() {
             headline={article.headline.main}
             snippet={article.snippet}
             web_url={article.web_url}
+            key={results.length * Math.random()}
           />
         ))}
       </div>
