@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useContext } from "react";
-import { CartContext } from "../utils/context/CartContextHc";
-import CartCard from "../components/CartCard";
-import API from "../utils/API";
+import React, { useEffect, useState, useContext } from 'react';
+import { CartContext } from '../utils/context/CartContextHc';
+import CartCard from '../components/CartCard';
+import API from '../utils/API';
 
 function Cart() {
   const [cart, setCart] = useContext(CartContext);
@@ -62,8 +62,6 @@ function Cart() {
         {cart.map(result => (
           <CartCard
             title={result.title}
-            // seller={result.seller}
-            // short={result.short_description}
             price={result.price}
             key={result.length * Math.random()}
             id={result.id}

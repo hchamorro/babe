@@ -5,7 +5,6 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Products from './pages/Products';
-import Wellness from './pages/Wellness';
 import News from './pages/News';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
@@ -33,7 +32,6 @@ function App() {
             <Route exact path={['/shop']} component={Shop} />
             <Route exact path={['/about']} component={About} />
             <Route exact path={['/cart']} component={Cart} />
-            <Route exact path={['/wellness']} component={Wellness} />
             <Route exact path={['/news']} component={News} />
             <Route exact path={['/login']} component={Login} />
             <Route exact path={['/signup']} component={SignUp} />
