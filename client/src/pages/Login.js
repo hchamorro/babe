@@ -37,7 +37,13 @@ const LogIm = () => {
             cart: res.data.user.cart
           });
 
-          setCart([...cart, ...res.data.user.cart]);
+          const tempCart = [...cart, ...res.data.user.cart];
+          const verifiedCart = tempCart.filter(isNotEmpty);
+          function isNotEmpty(obj) {
+            return Object.keys(obj).length > 0;
+          }
+
+          setCart(verifiedCart);
         })
         .catch(err => console.log(err));
     }
