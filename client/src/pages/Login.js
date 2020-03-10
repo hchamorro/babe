@@ -31,7 +31,6 @@ const LogIn = () => {
           cart: []
         })
         .then(res => {
-          console.log(res);
           setUser({
             isLoggedIn: true,
             email: res.data.user.email,
@@ -57,7 +56,6 @@ const LogIn = () => {
       <>
         {toHome ? <Redirect to="/" /> : null}
         <div className="w-full max-w-xs">
-          {console.log('cart on the LOGIN--WELLNESS PAGE', cart)}
           <form
             className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
             onSubmit={logIn}
@@ -119,7 +117,6 @@ const LogIn = () => {
       <>
         {toHome ? <Redirect to="/" /> : null}
         <div className="w-full max-w-xs">
-          {console.log('cart on the LOGIN--WELLNESS PAGE', cart)}
           <form
             className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
             onSubmit={logIn}
