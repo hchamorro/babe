@@ -105,7 +105,7 @@ function Shop() {
           thumbnail={product.thumbnail}
           title={product.title}
           seller={product.seller}
-          // short={product.short_description}
+          short={product.short_description}
           price={product.price}
           AddCart={AddCart}
           key={product._id}
