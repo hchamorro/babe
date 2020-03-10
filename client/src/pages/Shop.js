@@ -69,6 +69,11 @@ function Shop() {
       }
       return false;
     });
+    console.log(
+      filterArray,
+      "*******************YOU DID THE THING*****************"
+    );
+    setResults(filterArray);
   }
 
   function updateUserDB(data) {
