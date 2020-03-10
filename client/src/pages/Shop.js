@@ -59,7 +59,17 @@ function Shop() {
     setResults(filterArray);
   }
 
-  function sortSubProducts(value) {}
+  function sortSubProducts(value) {
+    console.log(
+      "YOU CLICKED ON A SUBPRODUCT TAG. HOORAYYYY!!!!!!!!!!!!!!!!!!!!!!!"
+    );
+    const filterArray = products.filter(prod => {
+      if (prod.tagstwo.toLowerCase() === value) {
+        return true;
+      }
+      return false;
+    });
+  }
 
   function updateUserDB(data) {
     if (user.isLoggedIn) console.log("trying to update db");
@@ -103,8 +113,21 @@ function Shop() {
         <div onClick={() => sortProducts("health and wellness")}>
           Health and Wellness
         </div>
-
         <div onClick={() => sortProducts("beauty")}>Beauty</div>
+
+        <nav className="borders flex justify-between">
+          <div onClick={() => sortSubProducts("accessories")}>Accessories</div>
+
+          <div onClick={() => sortSubProducts("bras")}>Bras</div>
+
+          <div onClick={() => sortSubProducts("body wash")}>Body Wash</div>
+
+          <div onClick={() => sortSubProducts("menstrual products")}>
+            Menstrual Products
+          </div>
+          <div onClick={() => sortSubProducts("lotion")}>Lotion</div>
+          <div onClick={() => sortSubProducts("hair care")}>Hair Care</div>
+        </nav>
       </nav>
 
       {console.log(" this is what the cart looks like on SHOP PAGE", cart)}
