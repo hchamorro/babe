@@ -66,20 +66,12 @@ const productsSeed = [
     description:
       "It’s here: Our most beloved bra, now in cotton. Soft, strong, and so breathable, our 24/7™ Pima Cotton T-Shirt Bra is made with Pima cotton for a luxurious feel. Our fresh, modern design pairs perfectly with classic elements like our memory foam cups and comfortable double-layer band. It’s an everyday bra’s highest calling.",
     thumbnail:
-      "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_CottonHipster_StormyLilac_B_PDP_01_2020_1197_150x.jpg?v=1581378624",
+      "https://i.pinimg.com/originals/b5/5d/0a/b55d0ab620205e0cf0354f4984b1fa36.jpg",
     price: 68,
     img_URL: [
       {
         img:
-          "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_PRO_01_20203056_150x.jpg?v=1581378615"
-      },
-      {
-        img:
-          "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_CottonHipster_StormyLilac_B_PDP_01_2020_1267_150x.jpg?v=1581378637"
-      },
-      {
-        img:
-          "https://cdn.thirdlove.com/s/files/1/0305/6249/products/CottonTShirt_StormyLilac_CottonHipster_StormyLilac_B_PDP_01_2020_1295_150x.jpg?v=1581378647"
+          "https://i.pinimg.com/originals/b5/5d/0a/b55d0ab620205e0cf0354f4984b1fa36.jpg"
       }
     ],
     tags: "Clothing",
@@ -92,20 +84,12 @@ const productsSeed = [
     description:
       "Lace reinvented, we’ve transformed Parisian-inspired lace into a bra designed to appeal to you before anyone else. Created with dynamic layers of lace, sheer mesh and plunge-style memory foam cups, the Eyelash Lace Plunge forms to your breasts to give you a natural lift that can be enhanced with removable inserts. With a padded hook and eye, gold hardware and smooth band, this lace bra is your daily style starter.",
     thumbnail:
-      "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2740_150x.jpg?v=1572386416",
+      "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2740_800x.jpg?v=1572386416",
     price: 76,
     img_URL: [
       {
         img:
-          "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_PRO_08_2019-copy_150x.jpg?v=1572386416"
-      },
-      {
-        img:
-          "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2788_150x.jpg?v=1572386416"
-      },
-      {
-        img:
-          "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2816-copy_150x.jpg?v=1572386416"
+          "https://cdn.thirdlove.com/s/files/1/0305/6249/products/EyelashLacePlunge_Black_EyelashLaceThong_Black_A_PDP_08_2019_2740_800x.jpg?v=1572386416"
       }
     ],
     tags: "Clothing",
@@ -210,12 +194,12 @@ const productsSeed = [
     description:
       "Need a glow up? This hydrating shampoo nourishes with babassu and coconut oils, strengthens with keratin and adds shine with kumquat extract. Hair is left shiny, silky and flirty - so you can update that profile pic.",
     thumbnail:
-      "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Shampoo-Web_100x75.jpg?v=1581492943",
+      "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Shampoo-Web_1500x1125.jpg?v=1581492943",
     price: 28,
     img_URL: [
       {
         img:
-          "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Shampoo-Web_100x75.jpg?v=1581492943"
+          "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Shampoo-Web_1500x1125.jpg?v=1581492943"
       }
     ],
     tags: "Beauty",
@@ -228,7 +212,7 @@ const productsSeed = [
     description:
       "Feeling out of control? This hydrating conditioner makes hair (and life) easier to manage - promise. Strengthening keratin, nourishing babassu and coconut oils and kumquat extract leave hair shiny, silky and smooth. Hair so good you won't even notice that Mercury is in retrograde.",
     thumbnail:
-      "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Shampoo-Web_100x75.jpg?v=1581492943",
+      "https://cdn.shopify.com/s/files/1/1043/7322/products/OUAI-MED-Conditioner-Web_1000x750.jpg?v=1581492925",
     price: 28,
     img_URL: [
       {
