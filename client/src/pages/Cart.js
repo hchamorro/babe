@@ -85,6 +85,9 @@ function Cart() {
                 <div className="w-1/2  h-12 text-gray-700 text-base">
                   ${totalPrice}
                 </div>
+                <div>
+                  <button>Checkout Now</button>
+                </div>
               </div>
             </div>
           </div>
