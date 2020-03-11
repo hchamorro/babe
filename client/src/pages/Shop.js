@@ -47,7 +47,6 @@ function Shop() {
   }
 
   function sortProducts(value) {
-    console.log("YOU CLICKED ME!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", value);
     const filterArray = products.filter(prod => {
       if (prod.tags.toLowerCase() === value) {
         return true;
@@ -55,24 +54,16 @@ function Shop() {
       return false;
       console.log(prod);
     });
-    console.log(filterArray, "************************************");
     setResults(filterArray);
   }
 
   function sortSubProducts(value) {
-    console.log(
-      "YOU CLICKED ON A SUBPRODUCT TAG. HOORAYYYY!!!!!!!!!!!!!!!!!!!!!!!"
-    );
     const filterArray = products.filter(prod => {
       if (prod.tagstwo.toLowerCase() === value) {
         return true;
       }
       return false;
     });
-    console.log(
-      filterArray,
-      "*******************YOU DID THE THING*****************"
-    );
     setResults(filterArray);
   }
 
