@@ -30,7 +30,7 @@ function News() {
 
   return (
     <>
-      <div className="body-2 grid grid-cols-6 gap-4">
+      <div className="body-2 grid grid-cols-6 gap-4 px-64 py-8">
         <NewsCard
           headline="College Majors That Put Women on Equal Footing With
           Men"
