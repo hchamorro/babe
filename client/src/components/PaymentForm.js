@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {CartTotalContext} from '../utils/context/CartTotalContextIE';
 
 const styles = {
   name: {
@@ -48,7 +49,7 @@ export default class PaymentForm extends Component {
 
   componentDidMount(){
     const config = {
-      applicationId: "sq0idp-rARHLPiahkGtp6mMz2OeCA",
+      applicationId: "sq0idp-NSTESGi7a_tnR8BxD_4YpQ",
       locationId: "GMT96A77XABR1",
       inputClass: "sq-input",
       autoBuild: false,

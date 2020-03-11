@@ -1,10 +1,12 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { CartContext } from '../utils/context/CartContextHc';
+import { CartTotalContext } from '../utils/context/CartTotalContextIE';
 import CartCard from '../components/CartCard';
 import API from '../utils/API';
 
 function Cart() {
   const [cart, setCart] = useContext(CartContext);
+  const [total, setTotal] = useContext(CartTotalContext);
 
   // const [results, setResults] = useState([]);
   // function getCartData() {
@@ -81,9 +83,10 @@ function Cart() {
                   Total
                 </div>
                 <div className="w-1/2  h-12 text-gray-700 text-base">
-                  ${totalPrice}
+                  ${totalPrice} {setTotal(totalPrice)} {console.log('***************cart total*********************', total)}
                 </div>
                 <div>
+                  {/* link to checkout page */}
                   <button>Checkout Now</button>
                 </div>
               </div>

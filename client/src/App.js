@@ -8,13 +8,16 @@ import Products from './pages/Products';
 import News from './pages/News';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import Checkout from './pages/Checkout';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Nav from './components/Nav';
 import { UserProvider } from './utils/context/UserContextHc';
 import { CartProvider } from './utils/context/CartContextHc';
+import { CartTotalProvider } from './utils/context/CartTotalContextIE';
+
 import './assets/babe.css';
-import Checkout from './pages/Checkout';
+
 
 function App() {
   return (
@@ -22,6 +25,7 @@ function App() {
       <Switch>
         <UserProvider>
           <CartProvider>
+            <CartTotalProvider>
             {/* logo header */}
             <Header />
             {/* nav bar */}
@@ -35,12 +39,14 @@ function App() {
             <Route exact path={['/news']} component={News} />
             <Route exact path={['/login']} component={Login} />
             <Route exact path={['/signup']} component={SignUp} />
+            <Route exact path={['/checkout']} component={Checkout} />
 
             <Route path={['/shop/:id']} component={Products} />
-            <Route exact path={['/checkout']} component={Checkout} />
+            
 
             {/* footer */}
             <Footer />
+            </CartTotalProvider>
           </CartProvider>
         </UserProvider>
       </Switch>

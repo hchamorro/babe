@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PaymentForm from '../components/PaymentForm';
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       loaded: false
