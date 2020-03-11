@@ -1,12 +1,12 @@
-import React, { useEffect, useState, useContext } from 'react';
-import ProdCard from '../components/ProductCard';
-import HomeProdCard from '../components/HomeProdCard';
-import NewsCard from '../components/NewsCard';
-import '../assets/babe.css';
-import API from '../utils/API';
-import { CartContext } from '../utils/context/CartContextHc';
-import { UserContext } from '../utils/context/UserContextHc';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState, useContext } from "react";
+import ProdCard from "../components/ProductCard";
+import HomeProdCard from "../components/HomeProdCard";
+import NewsCard from "../components/NewsCard";
+import "../assets/babe.css";
+import API from "../utils/API";
+import { CartContext } from "../utils/context/CartContextHc";
+import { UserContext } from "../utils/context/UserContextHc";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [results, setResults] = useState([]);
@@ -28,7 +28,7 @@ function Home() {
         const tempArr = res.data;
         console.log(tempArr);
         const filterArray = tempArr.filter(prod => {
-          if (prod.tags.toLowerCase() === 'jewelry') {
+          if (prod.tags.toLowerCase() === "jewelry") {
             return true;
           }
           return false;
@@ -72,7 +72,7 @@ function Home() {
             key={product._id}
             id={product._id}
           >
-            <Link to={'/shop/' + product._id}>
+            <Link to={"/shop/" + product._id}>
               <strong>See More</strong>
             </Link>
           </HomeProdCard>
@@ -82,8 +82,8 @@ function Home() {
       <div className="flex justify-around subhead items-center py-8">
         trending
       </div>
-      <div className="flex items-center justify-between px-12 py-8">
-        <div className="body-2 grid grid-cols-6 gap-4 px-64 py-8">
+      <div className="flex items-center justify-between px-12 py-2">
+        <div className="body-2 grid grid-cols-6 gap-4 px-64 py-2">
           {articleNews[0]}
           {articleNews[1]}
         </div>

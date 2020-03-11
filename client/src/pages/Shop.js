@@ -112,26 +112,27 @@ function Shop() {
         <div onClick={() => sortProducts("beauty")}>Beauty</div>
       </nav>
 
-      {console.log(" this is what the cart looks like on SHOP PAGE", cart)}
-      {results.map(product => (
-        <ProdCard
-          thumbnail={product.thumbnail}
-          title={product.title}
-          seller={product.seller}
-          short={product.short_description}
-          price={product.price}
-          AddCart={AddCart}
-          key={product._id}
-          id={product._id}
-          qty={1}
-        >
-          {/* <Link to="">See More</Link> */}
+      <div className="py-8">
+        {results.map(product => (
+          <ProdCard
+            thumbnail={product.thumbnail}
+            title={product.title}
+            seller={product.seller}
+            short={product.short_description}
+            price={product.price}
+            AddCart={AddCart}
+            key={product._id}
+            id={product._id}
+            qty={1}
+          >
+            {/* <Link to="">See More</Link> */}
 
-          <Link to={"/shop/" + product._id}>
-            <strong>{product.title}</strong>
-          </Link>
-        </ProdCard>
-      ))}
+            <Link to={"/shop/" + product._id}>
+              <strong>{product.title}</strong>
+            </Link>
+          </ProdCard>
+        ))}
+      </div>
     </div>
   );
 }
