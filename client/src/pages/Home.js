@@ -1,22 +1,23 @@
 import React, { useEffect, useState, useContext } from 'react';
 import ProdCard from '../components/ProductCard';
 import HomeProdCard from '../components/HomeProdCard';
+import NewsCard from '../components/NewsCard';
 import '../assets/babe.css';
 import API from '../utils/API';
 import { CartContext } from '../utils/context/CartContextHc';
 import { UserContext } from '../utils/context/UserContextHc';
 import { Link } from 'react-router-dom';
 
-
-
 function Home() {
   const [results, setResults] = useState([]);
   const [products, setProducts] = useState([]);
+  const [newsResults, setNewsResults] = useState([]);
   const [cart, setCart] = useContext(CartContext);
   const [user, setUser] = useContext(UserContext);
 
   useEffect(() => {
     findAllProducts();
+    findWomanScience();
   }, []);
 
   function findAllProducts() {
@@ -37,39 +38,24 @@ function Home() {
       .catch(err => console.log(err));
   }
 
-  function AddCart(id, qty, price, image) {
-    handleCart(id, qty, price, image);
+  function findWomanScience() {
+    API.newsAPI
+      .getWomenScience()
+      .then(res => {
+        setNewsResults(res.data);
+      })
+      .catch(err => console.log(err));
   }
 
-  function updateUserDB(data) {
-    if (user.isLoggedIn) {
-      const id = user.id;
-      API.userAPI
-        .updateUserCart(id, data)
-        .then(res => {})
-        .catch(err => console.log(err));
-    }
-  }
-
-  function handleCart(id, qty, price, thumbnail) {
-    const existingProduct = cart.filter(p => p.id === id);
-    if (existingProduct.length > 0) {
-      const withoutExistingProduct = cart.filter(p => p.id !== id);
-      const updatedQty = {
-        ...existingProduct[0],
-        qty: existingProduct[0].qty + qty
-      };
-      setCart([...withoutExistingProduct, updatedQty]);
-      let tempArr = cart;
-      tempArr.push([...withoutExistingProduct, updatedQty]);
-      updateUserDB(tempArr);
-    } else {
-      setCart([...cart, { id, qty, price, thumbnail }]);
-      let tempArr = cart;
-      tempArr.push({ id, qty, price });
-      updateUserDB(tempArr);
-    }
-  }
+  const articleNews = newsResults.map(article => (
+    <NewsCard
+      headline={article.headline.main}
+      snippet={article.snippet}
+      web_url={article.web_url}
+      paragraph={article.lead_paragraph}
+      key={results.length * Math.random()}
+    />
+  ));
 
   return (
     <section className="main body-2">
@@ -86,7 +72,7 @@ function Home() {
             key={product._id}
             id={product._id}
           >
-            <Link to={"/shop/" + product._id}>
+            <Link to={'/shop/' + product._id}>
               <strong>See More</strong>
             </Link>
           </HomeProdCard>
@@ -97,7 +83,10 @@ function Home() {
         trending
       </div>
       <div className="flex items-center justify-between px-12 py-8">
-        trending story here
+        <div className="body-2 grid grid-cols-6 gap-4 px-64 py-8">
+          {articleNews[0]}
+          {articleNews[1]}
+        </div>
       </div>
     </section>
   );
