@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../assets/BABE-logo192.png';
-import shoppingBag from '../assets/shopping-bag.svg';
-import hamburger from '../assets/bars-solid.svg';
-import { UserContext } from '../utils/context/UserContextHc';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/BABE-logo192.png";
+import shoppingBag from "../assets/shopping-bag.svg";
+import hamburger from "../assets/bars-solid.svg";
+import { UserContext } from "../utils/context/UserContextHc";
 
-import '../assets/babe.css';
+import "../assets/babe.css";
 
 function Header(props) {
   const [user, setUser] = useContext(UserContext);
@@ -14,7 +14,7 @@ function Header(props) {
     return (
       <header className="flex items-center justify-between px-8 py-6">
         {/* login */}
-        <div>
+        <div className="login">
           <Link className="a" to="/login">
             Login
           </Link>
@@ -39,7 +39,7 @@ function Header(props) {
     return (
       <header className="flex items-center justify-between px-8 py-6">
         {/* login */}
-        <div>{user.email}</div>
+        <div className="login">{user.email}</div>
         {/* BABE Logo */}
         <div>
           <Link className="a" to="/">

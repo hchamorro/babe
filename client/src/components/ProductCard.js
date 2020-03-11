@@ -7,7 +7,7 @@ function ProdCard(props) {
       <img className="w-full" src={props.thumbnail} alt="" />
       <img className="w-full" src={props.img} alt="" />
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{props.title}</div>
+        <div className="item-name text-xl mb-2">{props.title}</div>
         <div>{props.seller}</div>
         <p>{props.short}</p>
         <p className="text-gray-700 text-base">{props.description}</p>

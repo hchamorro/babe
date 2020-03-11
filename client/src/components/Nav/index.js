@@ -15,9 +15,6 @@ function Navbar() {
       <Link className="a" to="/News">
         News
       </Link>
-      <Link className="a" to="/Wellness">
-        Wellness
-      </Link>
     </nav>
   );
 }
