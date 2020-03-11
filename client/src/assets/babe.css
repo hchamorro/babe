@@ -13,6 +13,11 @@
   font-size: 60%;
 }
 
+.add-to-cart-2 {
+  font-family: "champagne__limousines";
+  font-size: 70%;
+}
+
 .add-to-cart:hover {
   color: #e9afa3;
 }
@@ -39,6 +44,11 @@
 }
 
 .borders {
+  position: relative;
+  border-bottom: 1px solid black;
+}
+
+.borders-2 {
   position: relative;
   border-bottom: 1px solid black;
 }
@@ -81,6 +91,11 @@
   font-family: "champagne__limousinesbold";
   color: white;
   font-size: 50%;
+}
+
+.description {
+  font-family: "champagne__limousines";
+  font-size: 70%;
 }
 
 /* regular */
@@ -130,6 +145,15 @@
 }
 
 .footer-links:hover {
+  color: #718eeb;
+}
+
+.item-name {
+  font-family: "champagne__limousinesbold";
+  font-size: 100%;
+}
+
+.login {
   color: #718eeb;
 }
 
