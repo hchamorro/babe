@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useContext } from "react";
-import { Link, useParams } from "react-router-dom";
-import API from "../utils/API";
-import { CartContext } from "../utils/context/CartContextHc";
-import { UserContext } from "../utils/context/UserContextHc";
-import DetailsIE from "../components/DetailsIE";
+import React, { useEffect, useState, useContext } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import API from '../utils/API';
+import { CartContext } from '../utils/context/CartContextHc';
+import { UserContext } from '../utils/context/UserContextHc';
+import DetailsIE from '../components/DetailsIE';
 
 function Products(props) {
   const [product, setProduct] = useState({});
@@ -27,29 +27,24 @@ function Products(props) {
   }
 
   function AddCart(id, qty, price, image) {
-    // let p1 = new Promise((resolve, reject) => {
-    //   // handleQty(id, qty, price);
-    //   // setCart([...cart, id]);
-
-    //   resolve(setCart([...cart, { id, qty, price }]));
-    // });
-    // p1.then(() => {
-    //   console.log('complete cart', cart);
-    //   updateUserDB(cart);
-    // });
-
-    // setCart([...cart, { id, qty, price }]);
-    // let tempArr = cart;
-    // tempArr.push({ id, qty, price });
-    // console.log('this is temp arr', tempArr);
-
     handleCart(id, qty, price, image);
+  }
+
+  function updateUserDB(data) {
+    if (user.isLoggedIn) console.log('trying to update db');
+    const id = user.id;
+    API.userAPI
+      .updateUserCart(id, data)
+      .then(res => {
+        console.log('^^^^^^^^', res);
+      })
+      .catch(err => console.log(err));
   }
 
   function handleCart(id, qty, price, thumbnail) {
     const existingProduct = cart.filter(p => p.id === id);
     if (existingProduct.length > 0) {
-      console.log("you already have this in cart");
+      console.log('you already have this in cart');
       const withoutExistingProduct = cart.filter(p => p.id !== id);
       const updatedQty = {
         ...existingProduct[0],
@@ -67,23 +62,10 @@ function Products(props) {
     }
   }
 
-  function updateUserDB(data) {
-    if (user.isLoggedIn) console.log("trying to update db");
-    const id = user.id;
-    API.userAPI
-      .updateUserCart(id, data)
-      .then(res => {
-        console.log("^^^^^^^^", res);
-      })
-      .catch(err => console.log(err));
-  }
-
-
-
   return (
     <div className="body-2 py-12 px-8">
       {console.log(
-        "************************************Load Products by ID Here*********************************",
+        '************************************Load Products by ID Here*********************************',
         product
       )}
       {product && product.img_URL && (
@@ -94,6 +76,7 @@ function Products(props) {
           seller={product.seller}
           description={product.description}
           price={product.price}
+          qty={1}
           AddCart={AddCart}
         />
       )}
