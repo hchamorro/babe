@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import NewsCard from '../components/NewsCard';
-import API from '../utils/API';
+import React, { useEffect, useState } from "react";
+import NewsCard from "../components/NewsCard";
+import API from "../utils/API";
 
 function News() {
   const [results, setResults] = useState([]);
@@ -30,7 +30,7 @@ function News() {
 
   return (
     <>
-      <div className="grid grid-cols-6 gap-4">
+      <div className="body-2 grid grid-cols-6 gap-4">
         <NewsCard
           headline="College Majors That Put Women on Equal Footing With
           Men"
