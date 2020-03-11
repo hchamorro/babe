@@ -31,11 +31,13 @@ function Products(props) {
   }
 
   function updateUserDB(data) {
-    if (user.isLoggedIn) const id = user.id;
-    API.userAPI
-      .updateUserCart(id, data)
-      .then(res => {})
-      .catch(err => console.log(err));
+    if (user.isLoggedIn) {
+      const id = user.id;
+      API.userAPI
+        .updateUserCart(id, data)
+        .then(res => {})
+        .catch(err => console.log(err));
+    }
   }
 
   function handleCart(id, qty, price, thumbnail) {
