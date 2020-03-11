@@ -19,7 +19,7 @@ function DetailsIE(props) {
         <div className="px-12">
           <button
             onClick={() =>
-              props.AddCart(props.id, props.qty, props.price, props.thumbnail)
+              props.AddCart(props.id, props.qty, props.price, props.img)
             }
             className="add-to-cart-2 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-2 border border-gray-400 rounded shadow"
           >
