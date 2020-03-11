@@ -1,10 +1,13 @@
-import React, { useEffect, useState, useContext } from "react";
-import ProdCard from "../components/ProductCard";
-import "../assets/babe.css";
-import API from "../utils/API";
-import { CartContext } from "../utils/context/CartContextHc";
-import { UserContext } from "../utils/context/UserContextHc";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState, useContext } from 'react';
+import ProdCard from '../components/ProductCard';
+import HomeProdCard from '../components/HomeProdCard';
+import '../assets/babe.css';
+import API from '../utils/API';
+import { CartContext } from '../utils/context/CartContextHc';
+import { UserContext } from '../utils/context/UserContextHc';
+import { Link } from 'react-router-dom';
+
+
 
 function Home() {
   const [results, setResults] = useState([]);
@@ -21,7 +24,15 @@ function Home() {
       .getAllProducts()
       .then(res => {
         setProducts(res.data);
-        setResults(res.data);
+        const tempArr = res.data;
+        console.log(tempArr);
+        const filterArray = tempArr.filter(prod => {
+          if (prod.tags.toLowerCase() === 'jewelry') {
+            return true;
+          }
+          return false;
+        });
+        setResults(filterArray);
       })
       .catch(err => console.log(err));
   }
@@ -68,19 +79,17 @@ function Home() {
       </div>
       <div className="flex items-center justify-around px-12 py-8">
         {results.map(product => (
-          <ProdCard
+          <HomeProdCard
             thumbnail={product.thumbnail}
             title={product.title}
             price={product.price}
-            AddCart={AddCart}
             key={product._id}
             id={product._id}
-            qty={1}
           >
             <Link to={"/shop/" + product._id}>
               <strong>See More</strong>
             </Link>
-          </ProdCard>
+          </HomeProdCard>
         ))}
       </div>
       {/* trending */}
