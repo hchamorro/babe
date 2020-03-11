@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useContext } from 'react';
-import ProdCard from '../components/ProductCard';
-import '../assets/babe.css';
-import API from '../utils/API';
-import { CartContext } from '../utils/context/CartContextHc';
-import { UserContext } from '../utils/context/UserContextHc';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState, useContext } from "react";
+import ProdCard from "../components/ProductCard";
+import "../assets/babe.css";
+import API from "../utils/API";
+import { CartContext } from "../utils/context/CartContextHc";
+import { UserContext } from "../utils/context/UserContextHc";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [results, setResults] = useState([]);
@@ -77,14 +77,14 @@ function Home() {
             id={product._id}
             qty={1}
           >
-            <Link to={'/shop/' + product._id}>
+            <Link to={"/shop/" + product._id}>
               <strong>See More</strong>
             </Link>
           </ProdCard>
         ))}
       </div>
       {/* trending */}
-      <div className="flex justify-around subhead-2 items-center py-8">
+      <div className="flex justify-around subhead items-center py-8">
         trending
       </div>
       <div className="flex items-center justify-between px-12 py-8">

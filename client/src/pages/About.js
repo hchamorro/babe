@@ -1,21 +1,31 @@
-import React, { useEffect, useState } from 'react';
-import Oriana from '../assets/about_images/oriana.jpeg';
-import Izzy from '../assets/about_images/izzy.jpeg';
-import Hannah from '../assets/about_images/hannah.jpeg';
-import Jo from '../assets/about_images/jo.jpeg';
+import React, { useEffect, useState } from "react";
+import Oriana from "../assets/about_images/oriana-circle2.png";
+import Izzy from "../assets/about_images/izzy-circle2.png";
+import Hannah from "../assets/about_images/hannah-circle2.png";
+import Jo from "../assets/about_images/joanna-circle2.png";
+import "../assets/babe.css";
 
 function About() {
   return (
-    <div className="body-2 py-12">
+    <div className="body-2 py-8">
+      <div className="flex justify-around subhead items-center py-2">
+        meet the B.A.B.E.s
+      </div>
       {/* {oriana and izzy - row one} */}
       <div className="flex justify-around py-8">
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
-          <img className="" src={Oriana} alt="Oriana's Headshot" />
+          <div className="flex justify-center">
+            <img
+              className="flex justify-center"
+              src={Oriana}
+              alt="Oriana's Headshot"
+            />
+          </div>
           <div className="px-6 py-4">
             <div className="">Oriana Dentici</div>
             <div className="text-gray-700 text-base">
               <span className="">
-                Who is a woman that has inspired you or your career?{' '}
+                Who is a woman that has inspired you or your career?{" "}
                 <div>
                   Mia Hamm; as a kid I idolized her and started taking soccer
                   more seriously because of her.
@@ -23,7 +33,7 @@ function About() {
               </span>
               <div>&nbsp;</div>
               <span className="">
-                Why are you passionate about this project?{' '}
+                Why are you passionate about this project?{" "}
                 <div>
                   I feel that it is important to give women, women-identifying,
                   black, poc, queer people the platform to market themselves.
@@ -49,12 +59,14 @@ function About() {
         </div>
 
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
-          <img className="" src={Izzy} alt="Izzy's Headshot" />
+          <div className="flex justify-center">
+            <img className="justify-center" src={Izzy} alt="Izzy's Headshot" />
+          </div>
           <div className="px-6 py-4">
             <div className="">Izzy Edson</div>
             <div className="text-gray-700 text-base">
               <span className="">
-                Who is a woman that has inspired you or your career?{' '}
+                Who is a woman that has inspired you or your career?{" "}
                 <div>
                   Mia Hamm; as a kid I idolized her and started taking soccer
                   more seriously because of her.
@@ -62,7 +74,7 @@ function About() {
               </span>
               <div>&nbsp;</div>
               <span className="">
-                Why are you passionate about this project?{' '}
+                Why are you passionate about this project?{" "}
                 <div>
                   I feel that it is important to give women, women-identifying,
                   black, poc, queer people the platform to market themselves.
@@ -87,12 +99,18 @@ function About() {
       {/* {hannah and jo - row two} */}
       <div className="flex justify-around py-8">
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
-          <img className="" src={Hannah} alt="Hannah's Headshot" />
+          <div className="flex justify-center">
+            <img
+              className="justify-center"
+              src={Hannah}
+              alt="Hannah's Headshot"
+            />
+          </div>
           <div className="px-6 py-4">
             <div className="">Hannah Chamorro</div>
             <div className="text-gray-700 text-base">
               <span className="">
-                Who is a woman that has inspired you or your career?{' '}
+                Who is a woman that has inspired you or your career?{" "}
                 <div>
                   Mia Hamm; as a kid I idolized her and started taking soccer
                   more seriously because of her.
@@ -100,7 +118,7 @@ function About() {
               </span>
               <div>&nbsp;</div>
               <span className="">
-                Why are you passionate about this project?{' '}
+                Why are you passionate about this project?{" "}
                 <div>
                   I feel that it is important to give women, women-identifying,
                   black, poc, queer people the platform to market themselves.
@@ -120,12 +138,14 @@ function About() {
         </div>
 
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
-          <img className="" src={Jo} alt="Jo's Headshot" />
+          <div className="flex justify-center">
+            <img className="justify-center" src={Jo} alt="Jo's Headshot" />
+          </div>
           <div className="px-6 py-4">
             <div className="">Jo Sowa</div>
             <div className="text-gray-700 text-base">
               <span className="">
-                Who is a woman that has inspired you or your career?{' '}
+                Who is a woman that has inspired you or your career?{" "}
                 <div>
                   Mia Hamm; as a kid I idolized her and started taking soccer
                   more seriously because of her.
@@ -133,7 +153,7 @@ function About() {
               </span>
               <div>&nbsp;</div>
               <span className="">
-                Why are you passionate about this project?{' '}
+                Why are you passionate about this project?{" "}
                 <div>
                   I feel that it is important to give women, women-identifying,
                   black, poc, queer people the platform to market themselves.
