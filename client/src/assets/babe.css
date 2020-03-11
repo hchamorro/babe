@@ -2,6 +2,12 @@
   color: #e9afa3;
 }
 
+.about-photo {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
 .add-to-cart {
   font-family: "champagne__limousines";
   font-size: 60%;

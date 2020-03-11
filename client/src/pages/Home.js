@@ -7,6 +7,8 @@ import { CartContext } from '../utils/context/CartContextHc';
 import { UserContext } from '../utils/context/UserContextHc';
 import { Link } from 'react-router-dom';
 
+
+
 function Home() {
   const [results, setResults] = useState([]);
   const [products, setProducts] = useState([]);
@@ -84,14 +86,14 @@ function Home() {
             key={product._id}
             id={product._id}
           >
-            <Link to={'/shop/' + product._id}>
+            <Link to={"/shop/" + product._id}>
               <strong>See More</strong>
             </Link>
           </HomeProdCard>
         ))}
       </div>
       {/* trending */}
-      <div className="flex justify-around subhead-2 items-center py-8">
+      <div className="flex justify-around subhead items-center py-8">
         trending
       </div>
       <div className="flex items-center justify-between px-12 py-8">
