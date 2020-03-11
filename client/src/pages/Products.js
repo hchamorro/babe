@@ -31,13 +31,10 @@ function Products(props) {
   }
 
   function updateUserDB(data) {
-    if (user.isLoggedIn) console.log('trying to update db');
-    const id = user.id;
+    if (user.isLoggedIn) const id = user.id;
     API.userAPI
       .updateUserCart(id, data)
-      .then(res => {
-        console.log('^^^^^^^^', res);
-      })
+      .then(res => {})
       .catch(err => console.log(err));
   }
 
@@ -64,10 +61,6 @@ function Products(props) {
 
   return (
     <div className="body-2 py-12 px-8">
-      {console.log(
-        '************************************Load Products by ID Here*********************************',
-        product
-      )}
       {product && product.img_URL && (
         <DetailsIE
           id={product._id}
