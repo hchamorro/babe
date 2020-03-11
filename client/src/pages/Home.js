@@ -72,7 +72,6 @@ function Home() {
             thumbnail={product.thumbnail}
             title={product.title}
             price={product.price}
-            AddCart={AddCart}
             key={product._id}
             id={product._id}
             qty={1}
