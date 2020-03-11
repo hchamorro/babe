@@ -106,6 +106,18 @@ function Shop() {
 
   return (
     <div className="body-2 py-12 px-8">
+<<<<<<< HEAD
+      <div onHover="hide">
+        <nav className="borders-2 flex justify-between">
+          <div onClick={() => sortProducts("jewelry")}>Jewelry</div>
+
+          <div onClick={() => sortProducts("clothing")}>Clothing</div>
+
+          <div onClick={() => sortProducts("health and wellness")}>
+            Health and Wellness
+          </div>
+          <div onClick={() => sortProducts("beauty")}>Beauty</div>
+=======
       <nav className="borders flex justify-between">
         <div onClick={() => sortProducts('jewelry')}>Jewelry</div>
 
@@ -128,8 +140,9 @@ function Shop() {
           </div>
           <div onClick={() => sortSubProducts('lotion')}>Lotion</div>
           <div onClick={() => sortSubProducts('hair care')}>Hair Care</div>
+>>>>>>> cb9dcb3cf310cb321fb64432a9119516d35bf031
         </nav>
-      </nav>
+      </div>
 
       {console.log(' this is what the cart looks like on SHOP PAGE', cart)}
       {results.map(product => (
