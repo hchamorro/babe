@@ -22,7 +22,7 @@ function About() {
             />
           </div>
           <div className="px-6 py-4">
-            <div className="">Oriana Dentici</div>
+            <div className="name">Oriana Dentici</div>
             <div className="text-gray-700 text-base">
               <span className="">
                 Who is a woman that has inspired you or your career?{" "}
@@ -63,7 +63,7 @@ function About() {
             <img className="justify-center" src={Izzy} alt="Izzy's Headshot" />
           </div>
           <div className="px-6 py-4">
-            <div className="">Izzy Edson</div>
+            <div className="name">Izzy Edson</div>
             <div className="text-gray-700 text-base">
               <span className="">
                 Who is a woman that has inspired you or your career?{" "}
@@ -107,7 +107,7 @@ function About() {
             />
           </div>
           <div className="px-6 py-4">
-            <div className="">Hannah Chamorro</div>
+            <div className="name">Hannah Chamorro</div>
             <div className="text-gray-700 text-base">
               <span className="">
                 Who is a woman that has inspired you or your career?{" "}
@@ -142,7 +142,7 @@ function About() {
             <img className="justify-center" src={Jo} alt="Jo's Headshot" />
           </div>
           <div className="px-6 py-4">
-            <div className="">Jo Sowa</div>
+            <div className="name">Jo Sowa</div>
             <div className="text-gray-700 text-base">
               <span className="">
                 Who is a woman that has inspired you or your career?{" "}

@@ -187,6 +187,10 @@
   flex: 1;
 }
 
+.name {
+  font-family: "champagne__limousinesBdIt";
+}
+
 .price {
   font-family: "champagne__limousinesBdIt";
   font-size: 90%;
