@@ -112,27 +112,69 @@ function Shop() {
         <div onClick={() => sortProducts("beauty")}>Beauty</div>
       </nav>
 
-      <div className="py-8">
+      <section className="px-12 py-8">
         {results.map(product => (
-          <ProdCard
-            thumbnail={product.thumbnail}
-            title={product.title}
-            seller={product.seller}
-            short={product.short_description}
-            price={product.price}
-            AddCart={AddCart}
-            key={product._id}
-            id={product._id}
-            qty={1}
-          >
-            {/* <Link to="">See More</Link> */}
+          <div className="flex mb-4">
+            <div class="w-1/3">
+              <ProdCard
+                thumbnail={product.thumbnail}
+                title={product.title}
+                seller={product.seller}
+                short={product.short_description}
+                price={product.price}
+                AddCart={AddCart}
+                key={product._id}
+                id={product._id}
+                qty={1}
+              >
+                {/* <Link to="">See More</Link> */}
 
-            <Link to={"/shop/" + product._id}>
-              <strong>{product.title}</strong>
-            </Link>
-          </ProdCard>
+                <Link to={"/shop/" + product._id}>
+                  <strong>{product.title}</strong>
+                </Link>
+              </ProdCard>
+            </div>
+            <div class="w-1/3">
+              <ProdCard
+                thumbnail={product.thumbnail}
+                title={product.title}
+                seller={product.seller}
+                short={product.short_description}
+                price={product.price}
+                AddCart={AddCart}
+                key={product._id}
+                id={product._id}
+                qty={1}
+              >
+                {/* <Link to="">See More</Link> */}
+
+                <Link to={"/shop/" + product._id}>
+                  <strong>{product.title}</strong>
+                </Link>
+              </ProdCard>
+            </div>
+            <div class="w-1/3">
+              <ProdCard
+                thumbnail={product.thumbnail}
+                title={product.title}
+                seller={product.seller}
+                short={product.short_description}
+                price={product.price}
+                AddCart={AddCart}
+                key={product._id}
+                id={product._id}
+                qty={1}
+              >
+                {/* <Link to="">See More</Link> */}
+
+                <Link to={"/shop/" + product._id}>
+                  <strong>{product.title}</strong>
+                </Link>
+              </ProdCard>
+            </div>
+          </div>
         ))}
-      </div>
+      </section>
     </div>
   );
 }
