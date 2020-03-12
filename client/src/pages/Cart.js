@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { CartContext } from "../utils/context/CartContextHc";
 import { CartTotalContext } from "../utils/context/CartTotalContextIE";
+import { Link } from 'react-router-dom';
 import CartCard from "../components/CartCard";
 import API from "../utils/API";
 
@@ -95,7 +96,9 @@ function Cart() {
                   </div>
                   <div className="checkout">
                     {/* link to checkout page */}
-                    <button>Checkout Now</button>
+                    <Link to={'/checkout/'}>
+                      <strong>Checkout Now</strong>
+                    </Link>
                   </div>
                 </div>
               </div>
