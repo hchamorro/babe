@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PaymentForm from '../components/PaymentForm';
+import { CartTotalContext } from '../utils/context/CartTotalContextIE';
+
 
 class App extends Component {
   constructor(props) {
@@ -8,6 +10,7 @@ class App extends Component {
       loaded: false
     }
   }
+
 
   componentWillMount(){
     const that = this;
