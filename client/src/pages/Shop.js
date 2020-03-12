@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useContext } from "react";
-import ProdCard from "../components/ProductCard";
-import { Link } from "react-router-dom";
-import API from "../utils/API";
-import { CartContext } from "../utils/context/CartContextHc";
-import { UserContext } from "../utils/context/UserContextHc";
-import "../assets/babe.css";
+import React, { useEffect, useState, useContext } from 'react';
+import ProdCard from '../components/ProductCard';
+import { Link } from 'react-router-dom';
+import API from '../utils/API';
+import { CartContext } from '../utils/context/CartContextHc';
+import { UserContext } from '../utils/context/UserContextHc';
+import '../assets/babe.css';
 
 function Shop() {
   const [results, setResults] = useState([]);
@@ -52,7 +52,6 @@ function Shop() {
         return true;
       }
       return false;
-      console.log(prod);
     });
     setResults(filterArray);
   }
@@ -68,20 +67,18 @@ function Shop() {
   }
 
   function updateUserDB(data) {
-    if (user.isLoggedIn) console.log("trying to update db");
+    if (user.isLoggedIn) console.log('trying to update db');
     const id = user.id;
     API.userAPI
       .updateUserCart(id, data)
-      .then(res => {
-        console.log("^^^^^^^^", res);
-      })
+      .then(res => {})
       .catch(err => console.log(err));
   }
 
   function handleCart(id, qty, price, thumbnail) {
     const existingProduct = cart.filter(p => p.id === id);
     if (existingProduct.length > 0) {
-      console.log("you already have this in cart");
+      console.log('you already have this in cart');
       const withoutExistingProduct = cart.filter(p => p.id !== id);
       const updatedQty = {
         ...existingProduct[0],
@@ -102,78 +99,36 @@ function Shop() {
   return (
     <div className="body-2 py-12 px-8">
       <nav className="borders-2 flex justify-between">
-        <div onClick={() => sortProducts("jewelry")}>Jewelry</div>
+        <div onClick={() => sortProducts('jewelry')}>Jewelry</div>
 
-        <div onClick={() => sortProducts("clothing")}>Clothing</div>
+        <div onClick={() => sortProducts('clothing')}>Clothing</div>
 
-        <div onClick={() => sortProducts("health and wellness")}>
+        <div onClick={() => sortProducts('health and wellness')}>
           Health and Wellness
         </div>
-        <div onClick={() => sortProducts("beauty")}>Beauty</div>
+        <div onClick={() => sortProducts('beauty')}>Beauty</div>
       </nav>
 
       <section className="px-12 py-8">
-        {results.map(product => (
-          <div className="flex mb-4">
-            <div class="w-1/3">
-              <ProdCard
-                thumbnail={product.thumbnail}
-                title={product.title}
-                seller={product.seller}
-                short={product.short_description}
-                price={product.price}
-                AddCart={AddCart}
-                key={product._id}
-                id={product._id}
-                qty={1}
-              >
-                {/* <Link to="">See More</Link> */}
-
-                <Link to={"/shop/" + product._id}>
-                  <strong>{product.title}</strong>
-                </Link>
-              </ProdCard>
-            </div>
-            <div class="w-1/3">
-              <ProdCard
-                thumbnail={product.thumbnail}
-                title={product.title}
-                seller={product.seller}
-                short={product.short_description}
-                price={product.price}
-                AddCart={AddCart}
-                key={product._id}
-                id={product._id}
-                qty={1}
-              >
-                {/* <Link to="">See More</Link> */}
-
-                <Link to={"/shop/" + product._id}>
-                  <strong>{product.title}</strong>
-                </Link>
-              </ProdCard>
-            </div>
-            <div class="w-1/3">
-              <ProdCard
-                thumbnail={product.thumbnail}
-                title={product.title}
-                seller={product.seller}
-                short={product.short_description}
-                price={product.price}
-                AddCart={AddCart}
-                key={product._id}
-                id={product._id}
-                qty={1}
-              >
-                {/* <Link to="">See More</Link> */}
-
-                <Link to={"/shop/" + product._id}>
-                  <strong>{product.title}</strong>
-                </Link>
-              </ProdCard>
-            </div>
-          </div>
-        ))}
+        <div className="flex flex-wrap -mb-4">
+          {results.map(product => (
+            <ProdCard
+              thumbnail={product.thumbnail}
+              title={product.title}
+              seller={product.seller}
+              short={product.short_description}
+              price={product.price}
+              AddCart={AddCart}
+              key={product._id}
+              id={product._id}
+              qty={1}
+            >
+              <Link to={'/shop/' + product._id}>
+                <strong>{product.title}</strong>
+              </Link>
+            </ProdCard>
+          ))}
+        </div>
       </section>
     </div>
   );
