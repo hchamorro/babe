@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {CartTotalContext} from '../utils/context/CartTotalContextIE';
+import { CartTotalContext } from '../utils/context/CartTotalContextIE';
+
 
 const styles = {
   name: {
@@ -228,6 +229,7 @@ export default class PaymentForm extends Component {
         </div>
         <p style={styles.center} id="error"></p>
       </div>
-    )
+
+    );
   }
 }
