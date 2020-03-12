@@ -1,5 +1,5 @@
-import React from 'react';
-import '../assets/babe.css';
+import React from "react";
+import "../assets/babe.css";
 
 function ProdCard(props) {
   return (
@@ -12,7 +12,9 @@ function ProdCard(props) {
         <p>{props.short}</p>
         <p className="text-gray-700 text-base">{props.description}</p>
         <div className="price">${props.price}</div>
-        <div className="flex justify-between">{props.children}</div>
+        <div className="description-2 flex justify-between">
+          {props.children}
+        </div>
       </div>
     </div>
   );
