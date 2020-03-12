@@ -124,7 +124,7 @@ function Shop() {
               qty={1}
             >
               <Link to={'/shop/' + product._id}>
-                <strong>{product.title}</strong>
+                <strong>See More</strong>
               </Link>
             </ProdCard>
           ))}

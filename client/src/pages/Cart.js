@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
-import { Link } from 'react-router-dom';
 import { CartContext } from "../utils/context/CartContextHc";
 import { CartTotalContext } from "../utils/context/CartTotalContextIE";
+import { Link } from 'react-router-dom';
 import CartCard from "../components/CartCard";
 import API from "../utils/API";
 
@@ -61,46 +61,51 @@ function Cart() {
     return <div className="body-2 py-12 px-8">No Items in cart</div>;
   } else {
     return (
-      <div className="body-2 px-12 py-12">
-        {cart.map(result => (
-          <CartCard
-            title={result.title}
-            price={result.price}
-            key={result.length * Math.random()}
-            id={result.id}
-            img={result.thumbnail}
-            remove={removeItem}
-            qty={result.qty}
-            addQty={addQty}
-            subQty={subQty}
-          />
-        ))}
-
-        <div className="max-w-sm w-full lg:max-w-full py-8">
-          <div className="border-r border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4  leading-normal w-1/4">
-            <div className="mb-8">
-              <div className="flex mb-4">
-                <div className="w-1/2  h-12 text-gray-900 font-bold text-xl mb-2">
-                  Total
-                </div>
-                <div className="cart-price-2 w-1/2  h-12 text-gray-700 text-base">
-                  ${totalPrice} {setTotal(totalPrice)}{" "}
-                  {console.log(
-                    "***************cart total*********************",
-                    total
-                  )}
-                </div>
-                <div className="checkout">
-                  <Link to={'/checkout/'}>
-                    <strong>Checkout Now</strong>
-                  </Link>
-                  {/* link to checkout page */}
+      <section className="body-2 px-12 py-12">
+        <div className="flex justify-between">
+          {/* cart item */}
+          <div className="justify-start">
+            {cart.map(result => (
+              <CartCard
+                title={result.title}
+                price={result.price}
+                key={result.length * Math.random()}
+                id={result.id}
+                img={result.thumbnail}
+                remove={removeItem}
+                qty={result.qty}
+                addQty={addQty}
+                subQty={subQty}
+              />
+            ))}
+          </div>
+          {/* total */}
+          <div className="justify-end max-w-sm w-full lg:max-w-lg py-8">
+            <div className="border-r border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4  leading-normal ">
+              <div className="mb-8">
+                <div className="flex mb-4 px-5 py-3">
+                  <div className="w-1/2  h-12 text-gray-900 font-bold text-xl mb-2">
+                    Total
+                  </div>
+                  <div className="cart-price-2 w-1/2  h-12 text-gray-700 text-base">
+                    ${totalPrice} {setTotal(totalPrice)}{" "}
+                    {console.log(
+                      "***************cart total*********************",
+                      total
+                    )}
+                  </div>
+                  <div className="checkout">
+                    {/* link to checkout page */}
+                    <Link to={'/checkout/'}>
+                      <strong>Checkout Now</strong>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
