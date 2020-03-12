@@ -8,9 +8,13 @@ function NewsCard(props) {
         <p className="block text-gray-700 text-base  mb-2">{props.snippet}</p>
         <p className="block text-gray-700 text-base  mb-2">{props.paragraph}</p>
 
-        <p className="block text-gray-700 text-sm font-bold mb-2">
-          <a href={props.web_url}> {props.web_url} </a>
-        </p>
+        <a
+          className="block text-gray-700 text-sm font-bold mb-2"
+          href={props.web_url}
+        >
+          {' '}
+          {props.web_url}{' '}
+        </a>
       </div>
     </div>
   );
