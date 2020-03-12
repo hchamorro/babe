@@ -84,8 +84,12 @@ function Home() {
       </div>
       <div className="flex items-center justify-between px-12 py-2">
         <div className="body-2 grid grid-cols-6 gap-4 px-64 py-2">
-          {articleNews[0]}
-          {articleNews[1]}
+          <Link className="a" to="/News">
+            {articleNews[0]}
+          </Link>
+          <Link className="a" to="/News">
+            {articleNews[1]}
+          </Link>
         </div>
       </div>
     </section>
