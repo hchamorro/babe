@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Oriana from "../assets/about_images/oriana-circle2.png";
 import Izzy from "../assets/about_images/izzy-circle2.png";
 import Hannah from "../assets/about_images/hannah-circle2.png";
-import Jo from "../assets/about_images/joanna-circle2.png";
+import Jo from "../assets/about_images/joanna-circle3.png";
 import "../assets/babe.css";
 
 function About() {
