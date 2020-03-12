@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { CartTotalContext } from '../utils/context/CartTotalContextIE';
-
+import { CartTotalContext } from "../utils/context/CartTotalContextIE";
 
 const styles = {
   name: {
@@ -50,7 +49,7 @@ export default class PaymentForm extends Component {
 
   componentDidMount(){
     const config = {
-      applicationId: "sq0idp-NSTESGi7a_tnR8BxD_4YpQ",
+      applicationId: "sq0idp-rARHLPiahkGtp6mMz2OeCA",
       locationId: "GMT96A77XABR1",
       inputClass: "sq-input",
       autoBuild: false,
@@ -188,7 +187,7 @@ export default class PaymentForm extends Component {
 
   render(){
     return (
-      <div className="container">
+      <div className="body-2 container py-8 px-12">
         <div id="form-container">
           <div id="sq-walletbox">
             <button style={{display: (this.state.applePay) ? 'inherit': 'none'}}
@@ -229,7 +228,6 @@ export default class PaymentForm extends Component {
         </div>
         <p style={styles.center} id="error"></p>
       </div>
-
-    );
+    )
   }
 }
