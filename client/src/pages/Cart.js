@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
+import { Link } from 'react-router-dom';
 import { CartContext } from "../utils/context/CartContextHc";
 import { CartTotalContext } from "../utils/context/CartTotalContextIE";
 import CartCard from "../components/CartCard";
@@ -90,8 +91,10 @@ function Cart() {
                   )}
                 </div>
                 <div className="checkout">
+                  <Link to={'/checkout/'}>
+                    <strong>Checkout Now</strong>
+                  </Link>
                   {/* link to checkout page */}
-                  <button>Checkout Now</button>
                 </div>
               </div>
             </div>
