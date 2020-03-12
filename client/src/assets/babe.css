@@ -87,6 +87,23 @@
   color: #e9afa3;
 }
 
+.cart-price {
+  font-family: "champagne__limousinesBdIt";
+}
+
+.cart-price-2 {
+  font-family: "champagne__limousinesBdIt";
+  font-size: 90%;
+}
+
+.checkout {
+  font-family: "champagne__limousinesitalic";
+}
+
+.checkout:hover {
+  color: #e9afa3;
+}
+
 .copyright {
   font-family: "champagne__limousinesbold";
   color: white;
@@ -96,6 +113,15 @@
 .description {
   font-family: "champagne__limousines";
   font-size: 70%;
+}
+
+.description-2 {
+  font-family: "champagne__limousinesbold";
+  font-size: 70%;
+}
+
+.description-2:hover {
+  color: #e9afa3;
 }
 
 /* regular */
@@ -163,7 +189,16 @@
 
 .price {
   font-family: "champagne__limousinesBdIt";
-  font-size: 100%;
+  font-size: 90%;
+}
+
+.seller {
+  font-family: "champagne__limousinesitalic";
+}
+
+.shop-description {
+  font-family: "champagne__limousines";
+  font-size: 70%;
 }
 
 .subhead {

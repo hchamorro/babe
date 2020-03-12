@@ -1,5 +1,5 @@
-import React from 'react';
-import '../assets/babe.css';
+import React from "react";
+import "../assets/babe.css";
 
 function ProdCard(props) {
   return (
@@ -9,11 +9,11 @@ function ProdCard(props) {
         <img className="w-full" src={props.img} alt="" />
         <div className="px-6 py-4">
           <div className="item-name text-xl mb-2">{props.title}</div>
-          <div>{props.seller}</div>
-          <p>{props.short}</p>
+          <div className="seller">{props.seller}</div>
+          <p className="shop-description py-2">{props.short}</p>
           <p className="text-gray-700 text-base">{props.description}</p>
           <div className="price">${props.price}</div>
-          <div className="flex justify-between">
+          <div className="flex py-4 justify-between">
             <button
               onClick={() =>
                 props.AddCart(props.id, props.qty, props.price, props.thumbnail)
@@ -22,7 +22,7 @@ function ProdCard(props) {
             >
               Add to Cart
             </button>
-            {props.children}
+            <div className="description-2">{props.children}</div>
           </div>
         </div>
       </div>
