@@ -82,7 +82,7 @@ function Cart() {
           <div className="justify-end max-w-sm w-full lg:max-w-lg py-8">
             <div className="border-r border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4  leading-normal ">
               <div className="mb-8">
-                <div className="flex mb-4">
+                <div className="flex mb-4 px-5 py-3">
                   <div className="w-1/2  h-12 text-gray-900 font-bold text-xl mb-2">
                     Total
                   </div>
@@ -107,4 +107,3 @@ function Cart() {
   }
 }
 export default Cart;
-
