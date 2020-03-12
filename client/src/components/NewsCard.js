@@ -9,7 +9,7 @@ function NewsCard(props) {
         <p className="block text-gray-700 text-base  mb-2">{props.paragraph}</p>
 
         <p className="block text-gray-700 text-sm font-bold mb-2">
-          {props.web_url}
+          <a href={props.web_url}> {props.web_url} </a>
         </p>
       </div>
     </div>
