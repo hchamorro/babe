@@ -18,7 +18,6 @@ router.route('/signup').post((req, res) => {
 
 //update route
 router.route('/update/:id').put((req, res) => {
-  console.log(req.body);
   db.User.updateOne(
     { _id: req.params.id },
     //change push to only one string then maybe a req.body
