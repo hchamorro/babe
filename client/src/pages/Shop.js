@@ -91,7 +91,7 @@ function Shop() {
     } else {
       setCart([...cart, { id, qty, price, thumbnail }]);
       let tempArr = cart;
-      tempArr.push({ id, qty, price });
+      tempArr.push({ id, qty, price, thumbnail });
       updateUserDB(tempArr);
     }
   }
