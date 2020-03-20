@@ -28,13 +28,10 @@ app.use(function(err, req, res, next) {
     next(err);
   }
 });
+mongodb+srv://hanCham:hanChamPass@cluster0-wjhnc.mongodb.net/test?retryWrites=true&w=majority
 
 // Connect to the Mongo DB
-
-mongoose.connect(
-  process.env.MONGODB_URI ||
-    'mongodb://babepage:BabePageConnect66!@ds153710.mlab.com:53710/heroku_1pwzf02q'
-);
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/babe');
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
