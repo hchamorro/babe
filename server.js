@@ -28,7 +28,7 @@ app.use(function(err, req, res, next) {
     next(err);
   }
 });
-mongodb+srv://hanCham:hanChamPass@cluster0-wjhnc.mongodb.net/test?retryWrites=true&w=majority
+//mongodb+srv://hanCham:hanChamPass@cluster0-wjhnc.mongodb.net/test?retryWrites=true&w=majority
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/babe');
