@@ -22,7 +22,7 @@ Shopping:
 
 Cart Display:
 
-![](images/cart.png)
+![](images/cart.PNG)
 
 News:
 
