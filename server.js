@@ -1,7 +1,7 @@
 const express = require('express');
 var cors = require('cors');
 const path = require('path');
-const seeders = require('./scripts/seedDB');
+// const seeders = require('./scripts/seedDB');
 
 const mongoose = require('mongoose');
 const routes = require('./routes');
@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Error handling
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   if (err.name === 'UnauthorizedError') {
     // Send the error rather than to show it on the console
     res.status(401).send(err);
@@ -45,6 +45,6 @@ if (process.env.NODE_ENV === 'production') {
 app.use(routes);
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
