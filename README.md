@@ -18,7 +18,7 @@ React App utilizing JavaScript
 
 Shopping:
 
-![](images/shoppingPage.png)
+![](images/shoppingPage.PNG)
 
 Cart Display:
 
@@ -26,7 +26,7 @@ Cart Display:
 
 News:
 
-![](images/News.png)
+![](images/News.PNG)
 
 ## Tech/framework used
 
